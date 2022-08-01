@@ -1,0 +1,59 @@
+         A.doctorLink:link      { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.doctorLink:visited   { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.doctorLink:active    { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.doctorLink:hover     { text-decoration: underline; }
+
+         A.pictureLink:link     { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.pictureLink:visited  { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.pictureLink:active   { color: #808000 ;  background-color: #ffffff; text-decoration: none;}
+         A.pictureLink:hover    { text-decoration: underline; }
+
+         .titleLink             { color: #556b2f ;  font-weight: bold;  font-style: normal;  background-color: #ffffff; text-decoration: none;}
+         A.titleLink:link       { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.titleLink:visited    { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.titleLink:active     { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.titleLink:hover      { text-decoration: underline; }
+
+         A.authorLink:link      { color: #800000 ;  background-color: #ffffff; text-decoration: none;}
+         A.authorLink:visited   { color: #800000 ;  background-color: #ffffff; text-decoration: none;}
+         A.authorLink:active    { color: #800000 ;  background-color: #ffffff; text-decoration: none;}
+         A.authorLink:hover     { text-decoration: underline; }
+         .authornolink          { color: #800000;   font-family: Geneva, Sans-serif; font-size: 100%; background-color: #ffffff; text-decoration: none;}
+
+         .journalLink           { color: #483d8b ;  font-weight: bold;  font-style: italic;  background-color: #ffffff; text-decoration: none;}
+         A.journalLink:link     { color: #483d8b ;  background-color: #ffffff; text-decoration: none;}
+         A.journalLink:visited  { color: #483d8b ;  background-color: #ffffff; text-decoration: none;}
+         A.journalLink:active   { color: #483d8b ;  background-color: #ffffff; text-decoration: none;}
+         A.journalLink:hover    { text-decoration: underline; }
+
+         A.biogLink:link        { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.biogLink:visited     { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.biogLink:active      { color: #556b2f ;  background-color: #ffffff; text-decoration: none;}
+         A.biogLink:hover       { text-decoration: underline; }
+
+         body { background-color: #ffffff; text-align: left }
+
+         body, textarea { color: #808000;                     font-family: Geneva, Sans-serif;                        font-size:  80%; background-color: #ffffff;}
+
+         .headder       { color: #808000;                     font-family: Verdana, Arial, Helvetica, Sans-serif;     font-size: 140%; background-color: #ffffff;}
+         .year          { color: #808000; font-weight: bold;  font-family: Geneva, Sans-serif;                        font-size: 120%; background-color: #ffffff;}
+         .journrefbold  { color: #483d8b; font-weight: bold;  font-family: Geneva, Sans-serif;                        font-size: 100%; background-color: #ffffff;}
+         .journref      { color: #483d8b;                     font-family: Geneva, Sans-serif;                        font-size: 100%; background-color: #ffffff;}
+         .biogbig       { color: #808000; font-weight: bold;  font-family: Geneva, Sans-serif;                        font-size: 120%; background-color: #ffffff;}
+         .biog          { color: #808000;                     font-family: Geneva, Sans-serif;                        font-size: 100%; background-color: #ffffff;}
+         .italic        { color: #808000; font-weight:normal; font-family: "Times New Roman", serif;  font-style: italic; font-size: 110%; background-color: #ffffff;}
+         .address       { color: #808000;                     font-family: Geneva, Sans-serif;                        font-size: 100%; background-color: #ffffff;}
+         .copyright     { color: #483d8b; font-weight: bold;  font-family: Geneva, Sans-serif;                        font-size:  70%; background-color: #ffffff;}
+         .modified      { color: #808000; font-style: italic; font-family: Geneva, Sans-serif;                        font-size: 100%; background-color: #ffffff;}
+
+         h3             { color: #ffffff; font-weight:normal; font-family: Geneva, Sans-serif;                        font-size: 140%; 
+                          padding:2px; margin-top: 0px; background: #FFF url(images/fade.jpg) repeat-y; text-align:left;   padding-left:10px } 
+
+         h2             { color: #ffffff; font-weight:normal; font-family: "Times New Roman", serif;  font-style: italic;   font-size: 150%; 
+                          padding:2px; margin-top: 0px; background: #FFF url(images/fade.jpg) repeat-y; text-align:left;   padding-left:10px } 
+
+         p.top_right    { position:absolute; top:10px; right:10px;  }
+         p.right    { position:absolute; right:10px;  }
+         P.centered_title { margin-left: auto; margin-right: auto; width: 30em; font-size: 140% }
+         P.centered { margin-left: auto; margin-right: auto; width: 50em }
+         IMG.centered { display: block; margin-left: auto; margin-right: auto } 
