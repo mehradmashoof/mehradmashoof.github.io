@@ -30,7 +30,4 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <li> Twitter: @mehradmashoof <a href="https://twitter.com/mehradmashoof/" class="biogLink">https://twitter.com/mehradmashoof/</a>.</li>
 <li> LinkedIn - mehradmashoof <a href="https://www.linkedin.com/in/mehradmashoof/" class="biogLink">https://www.linkedin.com/in/mehradmashoof/</a>.</li>
 </p>
-<p>
-Last modified: 2022-07-20
-</p>
 </body>
