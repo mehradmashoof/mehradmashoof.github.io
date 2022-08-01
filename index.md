@@ -1,10 +1,16 @@
+<?xml version="1.1" encoding="iso-8859-1"?>
+<!DOCTYPE
+ html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
 <head>
-      <title>Welcome to my blog.</title>
       <link rel="stylesheet" type="text/css" href="mehradmashoof.css" />
       <meta name="Author" content="Mehrad Mashoof"/>
       <meta name="date" content="2022-07-20"/>
       <meta name="robots" content="index,follow"/>
 </head> 
+
+Welcome to my blog. 
 
 I am a data scientist, researcher, cloud expert, database expert, and photographer.
 
@@ -20,5 +26,7 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <h3>Other places you can find me</h3>
   * [Twitter: @mehradmashoof](https://twitter.com/mehradmashoof) [https://twitter.com/mehradmashoof](https://twitter.com/mehradmashoof)
   * [LinkedIn - mehradmashoof](https://www.linkedin.com/in/mehradmashoof/)
+</body>
+</html>
 
 
