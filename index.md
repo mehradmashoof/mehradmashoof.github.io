@@ -34,4 +34,3 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 Last modified: 2022-07-20
 </p>
 </body>
-</html>
