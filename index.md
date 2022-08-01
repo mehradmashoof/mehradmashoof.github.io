@@ -1,4 +1,10 @@
-Welcome to my blog. 
+<head>
+      <title>Welcome to my blog.</title>
+      <link rel="stylesheet" type="text/css" href="mehradmashoof.css" />
+      <meta name="Author" content="Mehrad Mashoof"/>
+      <meta name="date" content="2022-07-20"/>
+      <meta name="robots" content="index,follow"/>
+</head> 
 
 I am a data scientist, researcher, cloud expert, database expert, and photographer.
 
