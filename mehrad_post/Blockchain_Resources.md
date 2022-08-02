@@ -1,4 +1,4 @@
-# Blockchain resources: 
+# Blockchain
 a curated list from GitHub
 
 Reproduced from GitHub https://github.com/
