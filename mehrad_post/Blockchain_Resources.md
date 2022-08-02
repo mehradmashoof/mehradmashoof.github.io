@@ -1,4 +1,5 @@
-#Blockchain resources: a curated list from GitHub
+# Blockchain resources: 
+a curated list from GitHub
 
 Reproduced from GitHub https://github.com/
 https://blockchainedindia.github.io/resources/
