@@ -25,7 +25,8 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [1]
-<a class="titleLink"> QUANTUM ARTIFICIAL INTELLIGENCE / MACHINE LEARNING </a>      
+<a class="titleLink"> QUANTUM ARTIFICIAL INTELLIGENCE / MACHINE LEARNING </a>
+<br/>
 <li> &nbsp; <a class="journalLink" >Quantum Fourier/wavelet Transform, QKD Cryptography, Quantum Machine learning algorithms, Hybrid Classical/Quantum AI Computing, Quantum forecasting, System Superposition/Entanglement</a> <br/> </li>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [2]
@@ -44,7 +45,7 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <li> &nbsp; <a class="journalLink" >Computational Medicine, Genetic Engineering, Health Policy, Synthetic Biology, Epigenomics</a> <br/> </li> 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [5]
-<a class="titleLink"> ECONOPHYSICS & NONLINEAR ECONOMIC DYNAMICS <br/>      
+<a class="titleLink"> ECONOPHYSICS & NONLINEAR ECONOMIC DYNAMICS </a>       
 <br/>
 <li> &nbsp; <a class="journalLink" >Fractality & Chaos, Nonlinear Macro-economic Dynamics & Economic Chaos</a> <br/> </li> 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
