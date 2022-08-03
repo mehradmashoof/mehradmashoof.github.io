@@ -26,53 +26,52 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [1]      
 <a class="titleLink"> QUANTUM ARTIFICIAL INTELLIGENCE / MACHINE LEARNING </a>
-<br/>
-<li> &nbsp; <a class="journalLink" >Quantum Fourier/wavelet Transform, QKD Cryptography, Quantum Machine learning algorithms, Hybrid Classical/Quantum AI Computing, Quantum forecasting, System Superposition/Entanglement</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Quantum Fourier/wavelet Transform, QKD Cryptography, Quantum Machine learning algorithms, Hybrid Classical/Quantum AI Computing, Quantum forecasting, System Superposition/Entanglement</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [2]
 <a class="titleLink"> BLOCKCHAIN, DeFi & METAVERSE, NEUROMORPHING COMPUTING </a>       
 <br/>
-<li> &nbsp; <a class="journalLink" >MEV-based attacks, Smart contracts, CBDCs, Oracle and semantic risks, Stablecoins, Algos, FinTech, Cryptography, Tokenization, Governance, Complex token wrapping structures, Composability risks, HFT, Technical analysis, Cryptocurrencies, Crypto-Econometrics & Technical trading, Intelligent AMM/DEX design, Metaverse & Singularity risks, NFTs</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >MEV-based attacks, Smart contracts, CBDCs, Oracle and semantic risks, Stablecoins, Algos, FinTech, Cryptography, Tokenization, Governance, Complex token wrapping structures, Composability risks, HFT, Technical analysis, Cryptocurrencies, Crypto-Econometrics & Technical trading, Intelligent AMM/DEX design, Metaverse & Singularity risks, NFTs</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [3]
 <a class="titleLink"> BIG DATA SCIENCE / FINANCIAL ECONOMETRICS </a>      
 <br/>
-<li> &nbsp; <a class="journalLink" >Nonlinear Time Series Modeling/Forecasting, Dependence/Causality, TVP-VAR, SVAR, BVAR, FAVAR, Hybrid DSGE models, State Space modelling (discrete & continuous time)</a> </li> <br/> 
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Nonlinear Time Series Modeling/Forecasting, Dependence/Causality, TVP-VAR, SVAR, BVAR, FAVAR, Hybrid DSGE models, State Space modelling (discrete & continuous time)</a> </li> <br/> 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [4]
 <a class="titleLink"> BIOINFORMATICS </a>      
 <br/>
-<li> &nbsp; <a class="journalLink" >Computational Medicine, Genetic Engineering, Health Policy, Synthetic Biology, Epigenomics</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Computational Medicine, Genetic Engineering, Health Policy, Synthetic Biology, Epigenomics</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [5]
 <a class="titleLink"> ECONOPHYSICS & NONLINEAR ECONOMIC DYNAMICS </a>       
 <br/>
-<li> &nbsp; <a class="journalLink" >Fractality & Chaos, Nonlinear Macro-economic Dynamics & Economic Chaos</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Fractality & Chaos, Nonlinear Macro-economic Dynamics & Economic Chaos</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [6]
 <a class="titleLink"> FINANCIAL ENGINEERING/COMPUTATIONAL ECONOMICS </a>       
 <br/>
-<li> &nbsp; <a class="journalLink" >Machine Learning, Technical trading, Exotic Derivatives</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Machine Learning, Technical trading, Exotic Derivatives</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [7]
 <a class="titleLink"> CONTROL THEORY </a>      
 <br/>
-<li> &nbsp; <a class="journalLink" >Chaotic, Hyperchaotic, Robust, H2, Stochastic & Optimal control (discrete & continuous time)</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Chaotic, Hyperchaotic, Robust, H2, Stochastic & Optimal control (discrete & continuous time)</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [8]
 <a class="titleLink"> PROBABILITY & STATISTICS </a>       
 <br/>
-<li> &nbsp; <a class="journalLink" >Multivariate Extreme-Value Theory, Nonparametric statistics, Bayesian methods (MCMC, MH, IS)</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Multivariate Extreme-Value Theory, Nonparametric statistics, Bayesian methods (MCMC, MH, IS)</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [9]
 <a class="titleLink"> SPECTRAL ANALYSIS </a>      
 <br/>
-<li> &nbsp; <a class="journalLink" >Filtering / Signal processing & Wavelet decomposition</a> </li> <br/> 
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Filtering / Signal processing & Wavelet decomposition</a> </li> <br/> 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [10]
 <a class="titleLink"> OPERATIONS RESEARCH </a>      
 <br/>
-<li> &nbsp; <a class="journalLink" >Optimization / Simulation applications in Large Scale Multi-criteria problems</a> </li> <br/>
+&nbsp; &nbsp; &nbsp;<li> &nbsp; <a class="journalLink" >Optimization / Simulation applications in Large Scale Multi-criteria problems</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [11]
 <a class="titleLink"> ECONOMIC/FINANCIAL MODELLING </a>       
