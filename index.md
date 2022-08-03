@@ -24,9 +24,9 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 <h3>Current Research Areas</h3>
 <p>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-[1]
-<br/>      
+[1]      
 <a class="titleLink"> QUANTUM ARTIFICIAL INTELLIGENCE / MACHINE LEARNING </a>
+<br/>
 <li> &nbsp; <a class="journalLink" >Quantum Fourier/wavelet Transform, QKD Cryptography, Quantum Machine learning algorithms, Hybrid Classical/Quantum AI Computing, Quantum forecasting, System Superposition/Entanglement</a> </li> <br/>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 [2]
