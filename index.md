@@ -77,7 +77,7 @@ I am a data scientist, researcher, cloud expert, database expert, and photograph
 [11]
 <a class="titleLink"> ECONOMIC/FINANCIAL MODELLING </a>       
 <br/>
-<li> &nbsp; <a class="journalLink" >Econophysics, Heterogeneous Agent models, Bounded rationality, Behavioral economics</a> <br/> </li> </li>              
+<li> &nbsp; <a class="journalLink" >Econophysics, Heterogeneous Agent models, Bounded rationality, Behavioral economics</a> <br/> </li>              
 </p>
 <h3>Photography</h3>
 <p>
