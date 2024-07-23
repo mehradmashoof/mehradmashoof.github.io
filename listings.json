@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/content/resources/index.html",
+    "items": [
+      "/content/resources/Blockchain_Resources.html",
+      "/content/resources/Econophysics.html",
+      "/content/resources/Machine_Learning.html",
+      "/content/resources/Programming-Resources.html",
+      "/content/resources/Quantum_Computing.html"
+    ]
+  },
+  {
+    "listing": "/content/research/index.html",
+    "items": []
+  }
+]

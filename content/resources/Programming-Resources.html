@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="GitHub">
+<meta name="dcterms.date" content="2024-07-20">
+
+<title>Algorithms &amp; Programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Mehrad Mashoof</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../content/resources/index.html" aria-current="page"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/mehradmashoof/"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mehradmashoof/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mehradmashoof/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mehrad-Mashoof/"> <i class="bi bi-researchgate" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/resources/Programming-Resources.html">Algorithms &amp; Programming</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Algorithms &amp; Programming</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">algorithms</div>
+                <div class="quarto-category">programming</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>GitHub </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 20, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Blockchain_Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blockchain</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Econophysics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Econophysics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Machine_Learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI, ML &amp; Big Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Programming-Resources.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Algorithms &amp; Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Quantum_Computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quantum Computing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#mastering-programming-a-curated-list-from-github" id="toc-mastering-programming-a-curated-list-from-github" class="nav-link active" data-scroll-target="#mastering-programming-a-curated-list-from-github">Mastering Programming: a curated list from GitHub</a></li>
+  <li><a href="#curated-programming-resources" id="toc-curated-programming-resources" class="nav-link" data-scroll-target="#curated-programming-resources">Curated Programming Resources</a>
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul>
+  <li><a href="#motivation-and-goals" id="toc-motivation-and-goals" class="nav-link" data-scroll-target="#motivation-and-goals">Motivation and goals</a></li>
+  <li><a href="#where-do-i-start" id="toc-where-do-i-start" class="nav-link" data-scroll-target="#where-do-i-start">Where do I start?</a></li>
+  <li><a href="#how-this-page-is-organized" id="toc-how-this-page-is-organized" class="nav-link" data-scroll-target="#how-this-page-is-organized">How this page is organized</a></li>
+  <li><a href="#which-resource-should-i-pick" id="toc-which-resource-should-i-pick" class="nav-link" data-scroll-target="#which-resource-should-i-pick">Which resource should I pick?</a></li>
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
+  </ul></li>
+  <li><a href="#general-resources" id="toc-general-resources" class="nav-link" data-scroll-target="#general-resources">General resources</a>
+  <ul>
+  <li><a href="#links-to-other-big-lists" id="toc-links-to-other-big-lists" class="nav-link" data-scroll-target="#links-to-other-big-lists">Links to other big lists</a></li>
+  <li><a href="#online-courses" id="toc-online-courses" class="nav-link" data-scroll-target="#online-courses">Online courses</a></li>
+  </ul></li>
+  <li><a href="#programming-languages" id="toc-programming-languages" class="nav-link" data-scroll-target="#programming-languages">Programming Languages</a>
+  <ul>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">C</a></li>
+  <li><a href="#c-1" id="toc-c-1" class="nav-link" data-scroll-target="#c-1">C++</a></li>
+  <li><a href="#c-sharp" id="toc-c-sharp" class="nav-link" data-scroll-target="#c-sharp">C-Sharp</a></li>
+  <li><a href="#haskell" id="toc-haskell" class="nav-link" data-scroll-target="#haskell">Haskell</a></li>
+  <li><a href="#html-css-and-javascript" id="toc-html-css-and-javascript" class="nav-link" data-scroll-target="#html-css-and-javascript">HTML, CSS, and JavaScript</a></li>
+  <li><a href="#lisp-scheme-common-lisp-clojure-etc" id="toc-lisp-scheme-common-lisp-clojure-etc" class="nav-link" data-scroll-target="#lisp-scheme-common-lisp-clojure-etc">Lisp (Scheme, Common Lisp, Clojure, etc)</a></li>
+  <li><a href="#java" id="toc-java" class="nav-link" data-scroll-target="#java">Java</a></li>
+  <li><a href="#perl" id="toc-perl" class="nav-link" data-scroll-target="#perl">Perl</a></li>
+  <li><a href="#php" id="toc-php" class="nav-link" data-scroll-target="#php">PHP</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#ruby" id="toc-ruby" class="nav-link" data-scroll-target="#ruby">Ruby</a></li>
+  <li><a href="#scratch" id="toc-scratch" class="nav-link" data-scroll-target="#scratch">Scratch</a></li>
+  </ul></li>
+  <li><a href="#other-topics" id="toc-other-topics" class="nav-link" data-scroll-target="#other-topics">Other topics</a>
+  <ul>
+  <li><a href="#developing-on-specific-platforms" id="toc-developing-on-specific-platforms" class="nav-link" data-scroll-target="#developing-on-specific-platforms">Developing on specific platforms</a></li>
+  <li><a href="#mobile-apps-android-mac-and-ios-windows" id="toc-mobile-apps-android-mac-and-ios-windows" class="nav-link" data-scroll-target="#mobile-apps-android-mac-and-ios-windows">Mobile apps (Android, Mac and iOS, Windows)</a></li>
+  <li><a href="#data-structures-and-algorithms" id="toc-data-structures-and-algorithms" class="nav-link" data-scroll-target="#data-structures-and-algorithms">Data structures and algorithms</a></li>
+  </ul></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a>
+  <ul>
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version control</a>
+  <ul class="collapse">
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
+  <li><a href="#mercurial" id="toc-mercurial" class="nav-link" data-scroll-target="#mercurial">Mercurial</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="mastering-programming-a-curated-list-from-github" class="level2">
+<h2 class="anchored" data-anchor-id="mastering-programming-a-curated-list-from-github">Mastering Programming: a curated list from GitHub</h2>
+<p><em>Reproduced from GitHub</em> <a href="https://github.com/" class="uri">https://github.com/</a></p>
+<p><a href="https://github.com/Michael0x2a/curated-programming-resources/blob/master/resources.md#curated-programming-resources" class="uri">https://github.com/Michael0x2a/curated-programming-resources/blob/master/resources.md#curated-programming-resources</a></p>
+</section>
+<section id="curated-programming-resources" class="level1">
+<h1>Curated Programming Resources</h1>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#motivation-and-goals">Motivation and Goals</a></li>
+<li><a href="#where-do-i-start">Where do I start?</a></li>
+<li><a href="#how-this-page-is-organized">How this page is organized</a></li>
+<li><a href="#which-resource-should-i-pick">Which resource should I pick?</a></li>
+<li><a href="#warning">Warning</a></li>
+</ul></li>
+<li><a href="#general-resources">General resources</a>
+<ul>
+<li><a href="#links-to-other-big-lists">Links to other big lists</a></li>
+<li><a href="#online-courses">Online courses</a></li>
+</ul></li>
+<li><a href="#programming-languages">Programming Languages</a>
+<ul>
+<li><a href="#c">C</a></li>
+<li><a href="#c-1">C++</a></li>
+<li><a href="#c-sharp">C#</a></li>
+<li><a href="#haskell">Haskell</a></li>
+<li><a href="#html-css-and-javascript">HTML, CSS, and JavaScript</a></li>
+<li><a href="#lisp-scheme-common-lisp-clojure-etc">Lisp (Scheme, Common Lisp, Clojure, etc)</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#perl">Perl</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#scratch">Scratch</a></li>
+</ul></li>
+<li><a href="#other-topics">Other topics</a>
+<ul>
+<li><a href="#developing-on-specific-platforms">Developing on specific platforms</a>
+<ul>
+<li><a href="#android">Android</a></li>
+<li><a href="#mac-and-ios">Mac and iOS</a></li>
+<li><a href="#windows-and-windows-phones">Windows and Windows Phones</a></li>
+</ul></li>
+<li><a href="#data-structures-and-algorithms">Data structures and algorithms</a></li>
+</ul></li>
+<li><a href="#tools">Tools</a>
+<ul>
+<li><a href="#version-control">Version control</a>
+<ul>
+<li><a href="#git">Git</a></li>
+<li><a href="#mercurial">Mercurial</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="motivation-and-goals" class="level3">
+<h3 class="anchored" data-anchor-id="motivation-and-goals">Motivation and goals</h3>
+<p>Currently, we’re living in a sort of “programming renaissance”. Programming and computer science is become more popular then ever – major initiatives like the <a href="http://hourofcode.com/us">Hour of Code</a> is popularizing learning programming across the world, and the number of people interested in majoring in computer science is <a href="http://www.princeton.edu/engineering/news/archive/index.xml?id=10983">growing</a> <a href="http://www.geekwire.com/2014/uw-computer-science-majors/">exponentially</a>.</p>
+<p>As a consequence, there is an increasingly huge number of resources and tutorials being produced for beginners who want to learn to code, ranging from books to online tutorials to interactive websites to massive open online courses (MOOCS) like Codecademy and Coursera.</p>
+<p>While this is great, it can also be overwhelming for beginners – there are almost too <em>many</em> resources available, and it’s difficult to figure out where to start.</p>
+<p>This page is meant to help solve that problem – to present a <strong>curated</strong> list of resources for people who are either new to programming, new to a particular topic, or want to advance their skills past the beginner stage. This page doesn’t try and list every single resource available, but instead links to resources that are guaranteed to be high-quality.</p>
+</section>
+<section id="where-do-i-start" class="level3">
+<h3 class="anchored" data-anchor-id="where-do-i-start">Where do I start?</h3>
+<p>If you know what you want to learn about, great! Jump to that section, start browsing the links, and find something which works for you.</p>
+<p>If you’re not sure where to start and which language to learn, some good beginner languages are:</p>
+<ul>
+<li><a href="#python">Python</a> (general-purpose; scientific and mathematical computing)</li>
+<li><a href="#java">Java</a> (general-purpose; Android development)</li>
+<li><a href="#html-css-and-javascript">HTML/CSS/JavaScript</a> (websites and webapps)</li>
+<li><a href="#scratch">Scratch</a> (for younger children)</li>
+</ul>
+<p>Python and Java are both languages that are <a href="http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext">commonly used to teach programming</a> to beginners in schools and universities, and so will have a wide variety of resources available to help you learn. They’re also both widely used in the industry and so are useful languages to have in your toolbelt.</p>
+<p>Web development has been very popular lately, so there are many resources for learning HTML, CSS, and JavaScript, also making it suitable for learning. It also requires little to no installation and configuration on your computer. All you need is a text editor to write code – the code will run on your web browser.</p>
+<p>Scratch is a little different from other languages. It was designed from the ground up to be easy to use and learn – instead of typing text, you drag and connect together “blocks” to form programs, making it a very visual language. As a result, Scratch is a good language especially for younger children (elementary schoolers, middle schoolers) or for people who dislike typing.</p>
+</section>
+<section id="how-this-page-is-organized" class="level3">
+<h3 class="anchored" data-anchor-id="how-this-page-is-organized">How this page is organized</h3>
+<p>This page is subdivided into three parts – first, a “General resources” section that links to sites that tend to deliver high-quality content about a variety of topics, and a “Specific resources” section that provides resources on specific programming languages or topics.</p>
+<p>In general, most resources available will fall between two categories – online courses, and books + tutorials. Online courses tend to teach using video lectures, try and be more interactive, and try and emulate the structure of a course similar to ones you might take in college. In contrast, books and tutorials teach via written text and allow you to set your own pace.</p>
+</section>
+<section id="which-resource-should-i-pick" class="level3">
+<h3 class="anchored" data-anchor-id="which-resource-should-i-pick">Which resource should I pick?</h3>
+<p>Whether you prefer learning by watching a video or reading text is really a matter of personal preference. <em>I</em> personally prefer reading, but your learning style might be completely different. You may need to explore and browse several different resources before you discover how you best learn.</p>
+<p>When possible, I’ll try and leave a description for each resource describing what their goal is, and what audience they’re suitable for. Some resources focus on trying to give a comprehensive introduction for beginners, other resources are more suitable for people who are already somewhat experienced in a language and want to learn more.</p>
+</section>
+<section id="warning" class="level3">
+<h3 class="anchored" data-anchor-id="warning">Warning</h3>
+<p>This page is still a work-in-progress, and will be updated slowly, time permitting. Some sections may currently be incomplete, and some links may not yet be fully vetted.</p>
+<p>If you would like to contribute, please see <a href="https://github.com/Michael0x2a/curated-programming-resources/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for details.</p>
+</section>
+</section>
+<section id="general-resources" class="level2">
+<h2 class="anchored" data-anchor-id="general-resources">General resources</h2>
+<section id="links-to-other-big-lists" class="level3">
+<h3 class="anchored" data-anchor-id="links-to-other-big-lists">Links to other big lists</h3>
+<p>You can find a large list of <a href="https://github.com/EbookFoundation/free-programming-books">list of free programming books and resources on github</a>. (It used to be hosted on StackOverflow, but was moved over to Github on October 2013).</p>
+</section>
+<section id="online-courses" class="level3">
+<h3 class="anchored" data-anchor-id="online-courses">Online courses</h3>
+<p>Online courses are an increasingly popular way for universities and professionals to teach programming and computer science in a structured format. As a result, new online courses will pop up all the time, so it’s worth checking these resources periodically to see what’s new.</p>
+<ul>
+<li><a href="http://www.codecademy.com/">Codecademy</a> - offers free online courses in several different languages. However, Codecademy does have a tendency to teach only basic syntax, so you must work through more tutorials after finishing Codecademy. Focuses mainly on web development, Ruby, and Python.</li>
+<li><a href="https://www.coursera.org/">Coursera</a> - offers free online courses in many different fields from several different well-known universities. New courses are added every quarter, and content from old courses is typically archived. Because many courses appear to be new/may be a one-time thing, this page will not link to courses on Coursera unless it appears to be stable.</li>
+<li><a href="http://www.udacity.com/">Udacity</a> - offers free computer science courses taught by industry experts. Udacity offers two kinds of courses – regular courses and nanodegrees. Regular courses are free. Regular courses with one-on-one tutoring/code review requires a monthly fee. Nanodegrees are typically for people with some prior coding experience, and cost more money.</li>
+<li><a href="https://www.edx.org/">edX</a> - a joint effort between MIT, Harvard, and Berkeley to provide free online versions of some of their courses.</li>
+<li><a href="http://www.openculture.com/computer_science_free_courses">OpenCulture</a> - similar to all of the above. Video lectures are typically available on iTunes or Youtube. Typically does <strong>not</strong> require you to complete assignments, unlike many other online courses.</li>
+<li><a href="http://ocw.mit.edu/index.htm">MIT OpenCourseWare</a> - static course materials taught at MIT. Unless otherwise noted, most content from this website tends to be very rigorous and fast-paced.</li>
+<li><a href="https://www.khanacademy.org/">Khan Academy</a> - contains a few courses on programming and computer science; does contain many more courses on all kinds of topics (especially math).</li>
+<li><a href="https://see.stanford.edu/Course">Stanford Engineering Everywhere</a> - static course materials taught at Stanford.</li>
+</ul>
+<p>The following websites also contain a wide variety of tutorials for many different topics, but require payment and registration before you can access their courses.</p>
+<ul>
+<li><a href="http://teamtreehouse.com/">Team Treehouse</a> - focuses on web and iOS development.</li>
+<li><a href="http://www.lynda.com/">Lynda</a> - also includes courses on design, animation, video, business, and more.</li>
+<li><a href="http://www.pluralsight.com/">PluralSight</a> - similar to Lynda, but with a focus on developer and IT courses.</li>
+</ul>
+<p>In general, edX, OpenCulture, MIT OpenCourseware, and Stanford Engineering Everywhere tend to contain more rigorous, thorough, and demanding courses, whereas Codecademy and Khan Academy tend to focus on giving a more gentle introduction to programming. Coursera and Udacity tend to vary between these two extremes.</p>
+</section>
+</section>
+<section id="programming-languages" class="level2">
+<h2 class="anchored" data-anchor-id="programming-languages">Programming Languages</h2>
+<section id="c" class="level3">
+<h3 class="anchored" data-anchor-id="c">C</h3>
+<p>Note: C can be a finicky and difficult-to-teach language. Although the online courses and books are a good starting point and can take you a long way, the general consensus is that the best way to learn is through reading an actual book.</p>
+<p>In particular, I would strongly recommend that you follow the recommendations on <a href="http://stackoverflow.com/questions/562303/the-definitive-c-book-guide-and-list">StackOverflow’s C Book Guide and List</a>, and use only the resources listed here if you’re unable to obtain the books in the link.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>MIT Open Courseware has a few:
+<ul>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/">Practical Programming in C</a><br>
+For beginners.</li>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010/">Introduction to C Memory Management and C++ Object-Oriented Programming</a><br>
+Geared towards people with prior experience in a programming language that is not C or C++.</li>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-effective-programming-in-c-and-c-january-iap-2014/">Effective Programming in C and C++</a><br>
+Similar to the above.</li>
+</ul></li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://learn-c.org">Learn-C</a><br>
+An interactive online guide that teaches you basic C step-by-step.</li>
+</ul></li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/C_Programming">C Programming</a><br>
+One of Wikibooks’ featured books. Tends to focus on teaching mainly syntax. A good starting point and reference.</li>
+<li><a href="http://www.buildyourownlisp.com/">Build Your Own Lisp</a><br>
+Walks you through how to write a Lisp interpreter in C, teaching both languages simultaneously.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#c">More free books</a></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/C-Programming-Language-2nd-Edition/dp/0131103628/">The C Programming Language</a><br>
+The definitive guide to C. Also known as K&amp;R, after the authors.</li>
+<li><a href="http://stackoverflow.com/questions/562303/the-definitive-c-book-guide-and-list">The Definitive C Book Guide and List</a><br>
+A very well-maintained list of recommended books and resources on StackOverflow. Every book listed on this page is highly-recommended.</li>
+</ul></li>
+<li>Exercises: N/A</li>
+</ul>
+</section>
+<section id="c-1" class="level3">
+<h3 class="anchored" data-anchor-id="c-1">C++</h3>
+<p>Note: Similar to C, C++ can be a finicky and difficult-to-teach language. Although the online courses and books are a good starting point and can take you a long way, the general consensus is that the best way to learn is through reading an actual book.</p>
+<p>As with C, I would strongly recommend picking a book on <a href="http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list">StackOverflow’s C++ Book Guide and List</a>.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>MIT Open Courseware has a few:
+<ul>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/">Introduction to C++</a><br>
+For beginners, is fast-paced.</li>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010/">Introduction to C Memory Management and C++ Object-Oriented Programming</a><br>
+Geared towards people with prior experience in a programming language that is not C or C++.</li>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-effective-programming-in-c-and-c-january-iap-2014/">Effective Programming in C and C++</a> Similar to the above.</li>
+</ul></li>
+<li>Stanford’s 3-part “Introduction to Computer Science” series for beginners. The first course teaches Java, the latter two teaches C and C++.
+<ul>
+<li><a href="https://see.stanford.edu/Course/CS106A">Programming Methodology</a></li>
+<li><a href="https://see.stanford.edu/Course/CS106B">Programming Abstractions</a></li>
+<li><a href="https://see.stanford.edu/Course/CS107">Programming Paradigms</a></li>
+</ul></li>
+<li>Coursera’s <a href="https://www.coursera.org/course/cplusplus4c">C++ for C Programmers</a><br>
+May also be helpful for programmers with prior experience in another language besides C or C++.</li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://nova.umuc.edu/~jarc/sdsd/">C++ Interactive Exercises</a><br>
+An introduction to basic C++. Is a cross between an interactive tutorial and an online book.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://greenteapress.com/thinkcpp/index.html">How to Think Like a Computer Scientist</a><br>
+A good introduction to basic C++.</li>
+<li><a href="http://www.learncpp.com/">Learncpp.com</a><br>
+Tends to focus more on syntax, and less on programming. Might be useful for beginners, but as a reference, not a tutorial.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#c-1">More free books</a></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list">The Definitive C++ Book Guide and List</a><br>
+A very well-maintained list of recommended books and resources on StackOverflow. Every book listed on this page is highly-recommended.</li>
+</ul></li>
+<li>Exercises: N/A</li>
+</ul>
+</section>
+<section id="c-sharp" class="level3">
+<h3 class="anchored" data-anchor-id="c-sharp">C-Sharp</h3>
+<ul>
+<li>Online courses:
+<ul>
+<li>Microsoft Virtual Academy has a few free courses:
+<ul>
+<li><a href="https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169">C# Fundamentals for Absolute Beginners</a><br>
+A series of videos produced by Microsoft on learning C#. For beginners.</li>
+<li><a href="http://www.microsoftvirtualacademy.com/training-courses/developer-training-with-programming-in-c">Programming in C# Jump Start</a><br>
+Another series of videos produced by Microsoft. Assumes some prior knowledge of C#.</li>
+</ul></li>
+</ul></li>
+<li>Interactive tutorials: N/A</li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/C_Sharp_Programming">C# Programming</a><br>
+One of Wikibook’s featured books. For beginners. Tends to focus on syntax, and would also make a good reference.</li>
+<li><a href="http://www.csharpcourse.com/">The C# Yellow Book</a><br>
+The introductory text used by the University of Hull.</li>
+<li><a href="http://www.techotopia.com/index.php/C_Sharp_Essentials">C# Essentials</a><br>
+An introductory text on C#. Also includes information on Windows Forms, Visual Studios, and making GUIs.</li>
+<li><a href="http://msdn.microsoft.com/en-us/vstudio/hh341490">Visual C# resources</a><br>
+Microsoft’s official series of tutorials and guides on C# and .NET.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#c-sharp">More free books</a></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="">Sam’s Teach Yourself C# 5.0 in 24 Hours</a> by Scott Dorman<br>
+A good introduction for beginners.</li>
+<li><a href="http://www.amazon.com/Essential-Edition-Microsoft-Windows-Development/dp/0321877586">Essential C# 5.0</a><br>
+Very comprehensive, and intended more for intermediate programmers/programmings coming from another language.</li>
+<li><a href="http://www.amazon.com/gp/product/161729134X">C# in Depth, 3rd Edition</a><br>
+Also very comprehensive, and covers how to write idiomatic and clean C# code. Assumes the reader already knows some C#.</li>
+<li><a href="http://www.amazon.com/Effective-Specific-Ways-Improve-Your/dp/0321245660">Effective C#</a> and <a href="http://www.amazon.com/More-Effective-Specific-Ways-Improve/dp/0321485890">More Effective C#</a><br>
+A collection of tips and tricks to improve your C# code. Not for beginners.</li>
+</ul></li>
+<li>Exercises: N/A</li>
+</ul>
+</section>
+<section id="haskell" class="level3">
+<h3 class="anchored" data-anchor-id="haskell">Haskell</h3>
+<ul>
+<li>Online courses:
+<ul>
+<li>edX’s <a href="https://www.edx.org/course/introduction-functional-programming-delftx-fp101x#.VJw54f-kAA">Introduction to Functional Programming</a><br>
+Assumes familiarity with a non-functional programming language (Java, Python, C#, C++, etc).</li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://tryhaskell.org/">Try Haskell</a><br>
+An interactive guide that teaches basic Haskell.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://stackoverflow.com/a/1016986/646543">Getting started with Haskell</a><br>
+A comprehensive meta-guide that suggests the recommended order for following Haskell tutorials from beginning to advanced.</li>
+<li><a href="http://haskellbook.com/">Haskell Programming from first principles</a><br>
+An extremely detailed and comprehensive guide to Python, suitable both for complete beginners to programming and more experienced programmers who want to learn Haskell. This is probably one of the best resources on learning Haskell to date – the only downside is that it isn’t free.</li>
+<li><a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a><br>
+A beginner’s introduction to Haskell. Tends to focus on syntax.</li>
+<li><a href="http://en.wikibooks.org/wiki/Haskell">Haskell</a><br>
+One of Wikibook’s featured books. Covers basic to advanced Haskell. Very comprehensive.</li>
+<li><a href="http://book.realworldhaskell.org/">Real World Haskell</a>:<br>
+Covers how to use Haskell for practical applications. This is a good second book to read, after completing one of the above tutorials.</li>
+<li><a href="https://github.com/Gabriel439/post-rfc/blob/master/sotu.md">State of the Haskell Ecosystem</a>:<br>
+An overview of popular 3rd party libraries for accomplishing various tasks in Haskell.Not for absolute beginners, but more people interested in using Haskell to write practical and non-trivial applications.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#haskell">More free books</a></li>
+</ul></li>
+<li>Books (paper): N/A</li>
+<li>Exercises:
+<ul>
+<li><a href="http://haskell.org/haskellwiki/H-99:_Ninety-Nine_Haskell_Problems">H-99</a><br>
+A collection of 99 problems designed to increase your proficiency in Haskell.</li>
+</ul></li>
+</ul>
+</section>
+<section id="html-css-and-javascript" class="level3">
+<h3 class="anchored" data-anchor-id="html-css-and-javascript">HTML, CSS, and JavaScript</h3>
+<p>Note: HTML, CSS, and JavaScript are the three core technologies that runs on every web browser and makes up every webpage.</p>
+<p>HTML is a language used to describe the <em>structure</em> and <em>content</em> of a webpage. CSS is used to describe the <em>style</em> and <em>appearance</em>. JavaScript is used to add <em>behavior</em> and <em>interactivity</em>.</p>
+<p>The recommended learning order is typically to start with HTML and CSS, then move on to learning JavaScript once you feel you’ve acquired a basic understanding of the previous two.</p>
+<p>Also note that HTML and CSS are examples of “markup languages”, not “programming languages” and so will feel fairly different from JavaScript. If your goal is to learn just programming, you might want to jump straight ahead to JavaScript (or pick a different programming language!). However, since the main way to actually use JavaScript is through the web browser, you <em>do</em> need to learn HTML and CSS at one point or another.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>Codecademy has several courses related to web development.
+<ul>
+<li><a href="http://www.codecademy.com/skills/make-a-website">Make a website</a></li>
+<li><a href="http://www.codecademy.com/skills/make-an-interactive-website">Make an interactive website</a></li>
+<li><a href="http://www.codecademy.com/tracks/web">HTML &amp; CSS</a></li>
+<li><a href="http://www.codecademy.com/tracks/javascript">JavaScript</a></li>
+<li><a href="http://www.codecademy.com/tracks/jquery">jQuery</a> Please note that Codecademy focuses only on <em>introducing</em> programming languages. It is strongly recommended that you work through a more comprehensive beginner’s tutorial after finishing Codecademy.</li>
+</ul></li>
+<li>So does Udacity:
+<ul>
+<li><a href="https://www.udacity.com/course/ud304">Intro to HTML and CSS</a></li>
+<li><a href="https://www.udacity.com/course/ud804">JavaScript Basics</a><br>
+Does require some prior programming experience.</li>
+</ul></li>
+<li>Open Culture’s <a href="http://cs75.tv/2010/fall/">Building Dynamic Websites</a><br>
+Hosted by Harvard, and covers a wide variety of topics.</li>
+<li>Khan Academy has a series of <a href="https://www.khanacademy.org/computing/computer-programming">three courses</a> on introductory Javascript that focuses on drawing graphics and animations, and making games.</li>
+<li>Team Treehouse has a series of courses on <a href="http://teamtreehouse.com/features/javascript">HTML</a>, <a href="http://teamtreehouse.com/features/css">CSS</a>, and <a href="http://teamtreehouse.com/features/javascript">Javascript</a><br>
+Allows a free 14-day trial, but later requires payment.</li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="https://www.freecodecamp.com/">Free Code Camp</a><br>
+A beginner’s introduction to HTML, CSS, JavaScript, and other web technologies. Contains a large amount of exercises.</li>
+<li><a href="https://theodinproject.com">The Odin Project</a><br>
+A beginner’s full stack course. Contains a large amount of exercises.</li>
+<li><a href="http://css3please.com/">CSS3, please!</a><br>
+An interactive website that lets you dynamically change CSS rules to style an element on-screen. Not for beginners, but is a good way to discover advanced applications of CSS.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Network</a> (MDN)<br>
+A series of tutorials covering HTML, CSS, JavaScript, and more. Some tutorials are appropriate for beginners while other tutorials will be more advanced.</li>
+<li><a href="http://www.htmldog.com/">HtmlDog</a><br>
+Similar to the above, but targeted more specifically to beginners.</li>
+<li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a><br>
+A book that teaches you how to write idiomatic and clean JavaScript. Assumes prior experience with JavaScript/another programming language.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">A Re-introduction to JavaScript</a><br>
+A guide which gives a thorough and detailed overview of JavaScript.</li>
+<li>More free books:
+<ul>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#html--css">HTML and CSS</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#javascript">JavaScript</a></li>
+</ul></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/gp/product/0596517742">JavaScript: The Good Parts</a><br>
+A short book that covers the core aspects of JavaScript as well as info on writing idiomatic and clean JavaScript.</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://flukeout.github.io/">CSS Diner</a><br>
+A series of exercises on using CSS selectors effectively.</li>
+</ul></li>
+</ul>
+</section>
+<section id="lisp-scheme-common-lisp-clojure-etc" class="level3">
+<h3 class="anchored" data-anchor-id="lisp-scheme-common-lisp-clojure-etc">Lisp (Scheme, Common Lisp, Clojure, etc)</h3>
+<ul>
+<li>Online courses: N/A</li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://www.tryclj.com/">Try Clojure</a><br>
+An interactive tutorial for basic Clojure.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://www.defmacro.org/ramblings/lisp.html">The Nature of Lisp</a><br>
+Not really a tutorial on Lisp, but is instead an article on why so many people advocate Lisp and claim it will fundamentally change how you view code. Very good at explaining the philosophy of Lisp.</li>
+<li><a href="http://mitpress.mit.edu/sicp/">Structure and Interpretation of Computer Programs</a><br>
+SICP is the canonical introduction to Lisp, and used to be part of MIT’s introduction to CS course (before they switched to Python).
+<ul>
+<li><a href="http://sicpinclojure.com/">SICP in Clojure</a><br>
+An amended version of SICP which uses Clojure instead of Scheme.</li>
+</ul></li>
+<li><a href="http://htdp.org/">How to Design Programs</a>)<br>
+A competing book and philosophy of teaching to SICP. SICP tends to focus more on CS theory whereas HTDP tends to focus more on writing how to go about writing programs/analyzing problems.</li>
+<li><a href="http://www.buildyourownlisp.com/">Build Your Own Lisp</a><br>
+Walks you through how to write a Lisp interpreter in C, teaching both languages simultaneously.</li>
+<li><a href="http://stackoverflow.com/q/7224823/646543">Practical Common Lisp</a><br>
+An introductory book on Common Lisp. Covers practical and real-world applications of Common Lisp.</li>
+<li><a href="http://stackoverflow.com/q/7224823/646543">Where to learn how to practically use Common Lisp</a><br>
+An aggregation of books and resources on effectively using Common Lisp for programmers coming from an imperative world.</li>
+<li><a href="http://learn-clojure.com/">Learn Clojure</a><br>
+A website collecting many links related to learning Lisp.</li>
+<li>More free books:
+<ul>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#clojure">Clojure</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#lisp">Lisp</a> in general</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#scheme">Scheme</a></li>
+</ul></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812">Land of Lisp</a><br>
+A book that teaches Lisp (specifically Common Lisp) via making games. For beginners.</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html">L-99</a><br>
+A series of 99 problems designed to increase your proficiency in Lisp.</li>
+<li><a href="http://4clojure.com">4Clojure</a><br>
+A series of exercises geared around learning Clojure.</li>
+</ul></li>
+</ul>
+</section>
+<section id="java" class="level3">
+<h3 class="anchored" data-anchor-id="java">Java</h3>
+<ul>
+<li>Online courses:
+<ul>
+<li>The University of Helsinki’s “<a href="https://java-programming.mooc.fi/">Java Programming</a>” series for beginners.</li>
+<li>Udacity’s <a href="https://www.udacity.com/course/cs046">Intro to Java Programming</a><br>
+An objects-first introduction to Java.</li>
+<li>MIT Open Courseware:
+<ul>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/index.htm">Introduction to Programming in Java</a></li>
+<li><a href="http://ocw.mit.edu/courses/civil-and-environmental-engineering/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012/">Introduction to Computers and Engineering Problem Solving</a><br>
+For beginners, emphasizes practical application of Java.</li>
+</ul></li>
+<li>Stanford’s 3-part “Introduction to Computer Science” series for beginners. The first course teaches Java, the latter two teaches C and C++.
+<ul>
+<li><a href="https://see.stanford.edu/Course/CS106A">Programming Methodology</a></li>
+<li><a href="https://see.stanford.edu/Course/CS106B">Programming Abstractions</a></li>
+<li><a href="https://see.stanford.edu/Course/CS107">Programming Paradigms</a></li>
+</ul></li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://www.learnjavaonline.org/">Learn Java</a><br>
+An interactive tutorial that teaches basic Java.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://chortle.ccsu.edu/java5/index.html">Introduction to Computer Science using Java</a><br>
+An introductory text on Java. Moves a bit slowly, but covers everything in great detail (including setup).</li>
+<li><a href="http://programmingbydoing.com/">Learn by Doing</a><br>
+An introductory text on Java. The tutorial is exercise-driven.</li>
+<li><a href="http://greenteapress.com/thinkapjava/">Think Java</a><br>
+Another introductory text on Java. The content is based on the “How to think like a Computer Scientist” series.</li>
+<li><a href="http://www.mindview.net/Books/TIJ/">Thinking in Java, 3rd edition</a><br>
+Note: the fourth edition is the latest one, but currently is not free. The website can also be a little hard to navigate – the direct download link is <a href="http://www.mindviewinc.com/downloads/TIJ-3rd-edition4.0.zip">here</a>. Assumes some basic prior programming experience.</li>
+<li><a href="http://www.tutorialspoint.com/java/index.htm">TutorialsPoint’s Java Tutorial</a><br>
+An introduction to Java. Tends to focus mainly on syntax. May also make a good reference.</li>
+<li><a href="http://docs.oracle.com/javase/tutorial/">The Java Tutorial</a><br>
+The official Java tutorial, produced by Oracle. Tends to focus on language features and syntax.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#java">More free books</a></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/Head-First-Java-2nd-Edition/dp/0596009208/">Head First Java</a><br>
+A beginner’s introduction to Java.</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://practiceit.cs.washington.edu/">Practice-it</a><br>
+A series of exercises hosted by the University of Washington, starting with basic Java and finishing with data structures and algorithms. Requires (free) registration first before you can view or work on the exercises.</li>
+</ul></li>
+</ul>
+</section>
+<section id="perl" class="level3">
+<h3 class="anchored" data-anchor-id="perl">Perl</h3>
+<ul>
+<li>Online courses: N/A</li>
+<li>Interactive tutorials: N/A</li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://www.perl.org/books/beginning-perl/">Beginning Perl</a><br>
+A comprehensive and thorough introduction to Perl.</li>
+<li><a href="http://modernperlbooks.com/books/modern_perl_2014/">Modern Perl</a><br>
+A guide on writing clean and idiomatic Perl code. Very good for teaching the philosophy and fundamentals of Perl. Comprehensive and thorough.</li>
+<li><a href="http://www.perl.org/books/impatient-perl/">Impatient Perl</a><br>
+An accelerated guide for impatient people or people with prior programming experience.</li>
+<li><a href="http://qntm.org/perl">Learn Perl in about 2 hours 30 minutes</a><br>
+Another accelerated guide for the impatient. Geared towards people who have prior experience in another programming language.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#perl">More free books</a></li>
+<li>Perl.org also hosts a <a href="http://www.perl.org/books/library.html">list of recommended books</a>, many of which are available online for free.</li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/Learning-Perl-Randal-L-Schwartz/dp/1449303587">Learning Perl</a><br>
+An introductory text on Perl. Teaches on focusing syntax/the details of Perl, and not so much on how to program. Pragmatic and practical.</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://perl.plover.com/qotw/">Perl Quiz of the Week</a><br>
+A mailing list which sends out a new quiz/prompt once a week. Archives of past prompts are also available.</li>
+</ul></li>
+</ul>
+</section>
+<section id="php" class="level3">
+<h3 class="anchored" data-anchor-id="php">PHP</h3>
+<p>Note: while PHP can be very convenient, quick, and easy to use, it’s also a language viewed negatively by many programmers. (See <a href="http://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP: a fractal of bad design</a>). If you do decide to learn PHP and adopt it as your language of choice, just be aware of the fact that people will probably make fun of you at one point or another.</p>
+<p>Also, it’s important to first learn <a href="#html-css-and-javascript">HTML and CSS</a> before attempting to learn PHP. PHP is a language which attempts to “extend” and work with HTML, so may not fully make sense if you try and learn it before picking up basic web development.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>Team Treehouse’s <a href="http://teamtreehouse.com/features/php">PHP course</a> - allows a free 14-day trial, but later requires payment.</li>
+</ul></li>
+<li>Interactive resources:
+<ul>
+<li><a href="http://www.learn-php.org/">Learn PHP</a><br>
+An interactive guide that teaches basic PHP.</li>
+</ul></li>
+<li>Exercises:</li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://php.net/manual/en/index.php">PHP Manual</a> The official tutorial on PHP. Tends to focus on language features and syntax.</li>
+<li><a href="http://www.tutorialspoint.com/php/">TutorialPoint’s PHP Tutorial</a><br>
+An introduction to PHP. Tends to focus on syntax. May make a good reference.</li>
+<li><a href="http://www.phptherightway.com/">PHP The Right Way</a><br>
+A comprehensive guide that covers modern best practices in PHP and attempts to address common flaws, misconceptions, and errors that many beginners (and many tutorials) seem to possess. Assumes some prior knowledge of PHP.</li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/PHP-Absolute-Beginners-Jason-Lengstorf/dp/1430268158/ref=dp_ob_title_bk">PHP for Absolute Beginners</a><br>
+An introductory text on PHP.</li>
+<li><a href="http://www.amazon.com/PHP-Solutions-Dynamic-Design-Made/dp/1430232498/ref=dp_ob_title_bk">PHP Solutions: Dynamic Web Design Made Easy, 2nd edition</a><br>
+An example-driven introduction to PHP.</li>
+</ul></li>
+</ul>
+</section>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>Note: there are currently two versions of Python that are commonly taught and used – Python 2, and Python 3. Python 3 is the most recent version, but for a variety of reasons Python 2 still is fairly popular among many developers.</p>
+<p>If you’re not sure which version to pick, my recommendation would be to pick the resource which looks like the best fit for you, and just use whatever version they’re recommending. Luckily, the differences between the two are very minor (at least from the perspective of the beginner), so there’s really no difference if you learn using Python 2 vs Python 3.</p>
+<p>That said, when working on your own programs, I would always pick Python 3 unless you have good reason to otherwise. The Python community, with the exception of a few holdouts, is moving towards Python 3 and abandoning Python 2.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>University of Helsinki <a href="https://programming-24.mooc.fi/">MOOC Python Programming 2024</a></li>
+<li>edx’s <a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-0#.VJw5pv-kAA">Introduction to Computer Science and Programming Using Python</a><br>
+The companion book can be <a href="http://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0">found here</a>. The course is designed for beginners, part of a 2-part series, is self-paced, and has an emphasis on computation and data science.
+<ul>
+<li>MIT Open Courseware also offers a gentler “lead-in” course designed for those with no programming background that you can take before taking the above: <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-090-building-programming-experience-a-lead-in-to-6-001-january-iap-2005/">Building Programming Experience: A Lead-In to 6.001</a>.</li>
+</ul></li>
+<li>MIT Open Courseware’s <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/">A Gentle Introduction to Programming Using Python</a><br>
+A gentler version of the above.</li>
+<li>Coursera’s <a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody (Python)</a><br>
+For beginners; requires registration.</li>
+<li>Udacity’s <a href="https://www.udacity.com/course/ud036">Programming Foundations with Python</a><br>
+Requires some prior programming experience; focuses on object-oriented programming.</li>
+<li>Team Treehouse’s <a href="http://teamtreehouse.com/features/python">Python course</a><br>
+Allows a free 14-day trial, but later requires payment.</li>
+</ul></li>
+<li>Interactive resources:
+<ul>
+<li><a href="http://learnpython.org">LearnPython</a><br>
+An interactive online guide that teaches basic Python.</li>
+<li><a href="http://www.trypython.org/">Try Python</a><br>
+Another interactive online guide.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a> A book for complete beginners. It is aimed at office workers, students, administrators, and hobbyists who want to learn how to write practical programs rather than necessarily become software engineers. From the <a href="http://inventwithpython.com/">Invent with Python</a> author.</li>
+<li>How to Think Like a Computer Scientist (<a href="http://www.openbookproject.net/thinkcs/python/english2e/">Python 2 version</a> and <a href="http://www.openbookproject.net/thinkcs/python/english3e/">Python 3 version</a>)<br>
+A comprehensive introductory text on Python, focusing on teaching computer science fundamentals and problem-solving skills through Python. Suitable for beginners.</li>
+<li><a href="http://www.greenteapress.com/thinkpython/">Think Python</a><br>
+Another comprehensive introductory text on Python, with a similar focus as the previous resource. Also suitable for beginners.</li>
+<li>The official Python tutorial (for <a href="https://docs.python.org/2/tutorial/">Python 2</a> and <a href="https://docs.python.org/3/tutorial/">Python 3</a>). Moves a little quickly, but is very comprehensive and thorough. This is probably the best resource for experienced programmers who want to learn Python, since it doesn’t linger for too long on basic material.</li>
+<li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures</a><br>
+A fantastic introduction to data structures and algorithms and other traditional computer science concepts using Python. While it does briefly cover Python syntax, it assumes that you already have some basic prior experience.</li>
+<li><a href="http://www.diveintopython3.net/">Dive into Python 3</a><br>
+An accelerated introduction to Python. Warning: do NOT use “Dive into Python 2”. It’s very outdated.</li>
+<li><a href="http://ProgramArcadeGames.com">Program Arcade Games With Python And Pygame</a><br>
+A fantastic and thorough introduction to Python via making games. For beginners.</li>
+<li><a href="http://inventwithpython.com/">Invent with Python</a><br>
+Teaches programming through the creation of computer games with Python and Pygame. For beginners.</li>
+<li><a href="https://python-guide.readthedocs.org/en/latest/">The Hitchhiker’s Guide to Python</a><br>
+A comprehensive introduction to the Python ecosystem. Covers how to properly configure and set up a development environment in Python, best practices, writing idiomatic code, what the best 3rd party libraries are for different tasks, and shipping your code. Useful for both beginners and experts (however, the guide does not actually teach Python itself).</li>
+<li><a href="http://resrc.io/list/4/pycrumbs/">pycrumbs</a><br>
+A huge list of many useful articles, tutorials, and snippits on Python, ranging from basic to advanced.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python">More free books</a></li>
+<li><a href="http://pymotw.com/">PyMOTW</a> A tour of the Python standard library through short examples.</li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://importpython.com/books/">Import Python</a><br>
+A catalog of Python books (some are free)</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://www.pyschools.com/">Pyschools</a><br>
+Exercises and challenges in Python. Challenges require (free) registration.</li>
+</ul></li>
+</ul>
+</section>
+<section id="ruby" class="level3">
+<h3 class="anchored" data-anchor-id="ruby">Ruby</h3>
+<ul>
+<li>Online courses:
+<ul>
+<li>Team Treehouse’s <a href="http://teamtreehouse.com/features/ruby">Ruby course</a><br>
+Allows a free 14-day trial, but later requires payment.</li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://rubymonk.com/">RubyMonk</a><br>
+A collection of interactive tutorials to help you learn basic and advanced Ruby.</li>
+<li><a href="http://tryruby.org">TryRuby</a><br>
+An interactive online guide that teaches you basic Ruby step-by-step.</li>
+<li><a href="http://rubykoans.com/">Learn Ruby</a><br>
+A downloadable set of interactive tutorials.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://mislav.uniqpath.com/poignant-guide/">Why’s (Poignant) Guide to Ruby</a><br>
+A little quirky, but still very good.</li>
+<li><a href="http://learncodethehardway.org/ruby/">Learn Ruby The Hard Way</a><br>
+Part of the “Learn X The Hard Way” series. Focuses on teaching Ruby through a series of self-guided exercises.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#ruby">More free books</a></li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/The-Well-Grounded-Rubyist-David-Black/dp/1933988657">The Well-Grounded Rubyist</a><br>
+A comprehensive and thorough introduction to Ruby. For beginners.</li>
+<li><a href="http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional-Series/dp/0321584104">Eloquent Ruby</a><br>
+A guide on how to write Ruby idiomatically and cleanly. This book assumes that you already know Ruby or some other programming language.</li>
+</ul></li>
+<li>Exercises:
+<ul>
+<li><a href="http://rubyquiz.com/">Ruby Quiz</a><br>
+A series of exercises on writing programs in Ruby. New exercises are no longer being written, but the existing exercises are still very good.</li>
+</ul></li>
+</ul>
+</section>
+<section id="scratch" class="level3">
+<h3 class="anchored" data-anchor-id="scratch">Scratch</h3>
+<p>Scratch is a language wherein you create programs by dragging together and connecting “blocks”. Unlike other programming languages, Scratch is very visual, making it a very good first programming language, especially for children and younger teens.</p>
+<p>Because not many people may be familiar with Scratch, this section will contain resources that are helpful both for <em>learning</em> Scratch, and <em>teaching</em> Scratch.</p>
+<p>There are two</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>edX’s <a href="https://www.edx.org/course/programming-scratch-harveymuddx-cs002x#.VJw5t_-kAA">Programming in Scratch</a> - for beginners.</li>
+<li>edX’s <a href="https://www.edx.org/course/middle-years-computer-science-harveymuddx-cs001x#.VJw5rP-kAA">Middle-Years Computer Science</a> - a course designed to help teachers design an engaging computer science curriculum for middle-schoolers using Scratch.</li>
+</ul></li>
+<li>Interactive tutorials: N/A</li>
+<li>Video tutorials:
+<ul>
+<li><a href="http://scratch.mit.edu/help/videos/">Video tutorials</a> from Scratch’s website<br>
+A collection of video tutorials on Scratch for absolute beginners. Very comprehensive.</li>
+</ul></li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://inventwithscratch.com/about/">Invent with Scratch!</a><br>
+An introductory text on Scratch. For beginners.</li>
+<li><a href="http://cs.harvard.edu/malan/scratch/index.php">Scratch for Budding Computer Scientists</a><br>
+A short tutorial that takes a more formalized approach to teaching Scratch. Best suited for those with some prior experience.</li>
+<li><a href="http://stwww.weizmann.ac.il/g-cs/scratch/scratch_en.html">Computer Science Concepts in Scratch</a><br>
+A thorough introduction to Scratch. For beginners.</li>
+<li><a href="http://wiki.scratch.mit.edu/wiki/Advanced_Topics_%28forum%29">Scratch Advanced Topics</a><br>
+A collection of resources and guides on advanced usage of Scratch. Not for beginners.</li>
+<li>Reference guides: for <a href="http://download.scratch.mit.edu/ScratchReferenceGuide14.pdf">Scratch</a> and <a href="http://snap.berkeley.edu/SnapManual.pdf">Snap/Build Your Own Blocks</a> (a variant of Scratch)<br>
+Contains comprehensive descriptions of all language features. The Scratch reference will be useful for all levels, and the Snap reference will be particularly useful for those who are already proficient at programming in another language.</li>
+<li><a href="http://scratch.mit.edu/educators/">Scratch for Educators</a><br>
+Scratch’s official portal and collection of resources for teaching using Scratch.</li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#scratch">More free books</a></li>
+</ul></li>
+<li>Books (paper): N/A</li>
+<li>Exercises: N/A</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="other-topics" class="level2">
+<h2 class="anchored" data-anchor-id="other-topics">Other topics</h2>
+<p>Note: this section of the guide is very much a work-in-progress.</p>
+<section id="developing-on-specific-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="developing-on-specific-platforms">Developing on specific platforms</h3>
+</section>
+<section id="mobile-apps-android-mac-and-ios-windows" class="level3">
+<h3 class="anchored" data-anchor-id="mobile-apps-android-mac-and-ios-windows">Mobile apps (Android, Mac and iOS, Windows)</h3>
+<p>Due to my lack of experience working with mobile apps, I do not feel particularly comfortable recommending any particular resources regarding mobile development. This section of the guide might be expanded in the future, but for now, I would recommend following the recommendations listed here:</p>
+<ul>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#android">Android</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#ios">iOS</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#windows-phone">Windows</a></li>
+</ul>
+</section>
+<section id="data-structures-and-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="data-structures-and-algorithms">Data structures and algorithms</h3>
+<p>Unless otherwise noted, all of the resources in this category assume prior programming experience.</p>
+<ul>
+<li>Online courses:
+<ul>
+<li>Udacity’s <a href="https://www.udacity.com/course/cs215">Intro to Algorithms</a> - assumes proficiency in math up to the Algebra 2 level.</li>
+<li>Coursera’s <a href="https://www.coursera.org/course/algo">Algorithms: Design and Analysis, Part 1</a> - lectures are archived. Assumes some familarity with proofs.</li>
+<li>Open Culture has several good video playlists (mostly on YouTube)
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL6EF0274BD849A7D5">Algorithm Design and Analysis</a> - hosted by UCDavis (University of California, Davis)</li>
+<li><a href="https://www.youtube.com/playlist?list=PL-XXv-cvA_iDXrTvCvDgIkeCWeSIDr4Yh">Computer Science 61B (Data structures)</a> - hosted by UCBerkeley (University of California, Berkeley).</li>
+<li><a href="https://www.youtube.com/course?feature=edu&amp;list=ECE621E25B3BF8B9D1&amp;category=University%2FScience">CS2: Data Structures and Algorithms</a> - Hosted by the University of New South Wales</li>
+</ul></li>
+<li>MIT Open Courseware’s <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/">Introduction to Algorithms</a> and <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2012/">Design and Analysis of Algorithms</a></li>
+<li>Khan Academy’s <a href="https://www.khanacademy.org/computing/computer-science/algorithms">Algorithms</a></li>
+</ul></li>
+<li>Interactive tutorials: N/A</li>
+<li>Exercises:
+<ul>
+<li><a href="http://codingbat.com/">Codingbat</a><br>
+Contains Java and Python exercises. For beginners and intermediate-level programmers.<br>
+</li>
+<li><a href="http://www.codeabbey.com/">CodeAbbey</a><br>
+Similar to Codingbat.</li>
+<li><a href="https://www.hackerrank.com/">HackerRank</a><br>
+Contains a large collection of exercises, from basic up to the competitive level. Good for both beginners and advanced programmers. Also holds their own online competition.</li>
+<li><a href="http://www.topcoder.com/">TopCoder</a><br>
+Similar to HackerRank.</li>
+<li><a href="http://uva.onlinejudge.org/">UVa Online Judge</a><br>
+A collection of programming problems and solutions from multiple programming competitions.</li>
+<li><a href="https://projecteuler.net/">Project Euler</a><br>
+A collection of programming exercises. The exercises are more math-oriented, and are not always CS-oriented.</li>
+</ul></li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures</a><br>
+A very thorough introduction to data structures and algorithms. Although it uses Python, the main concepts taught should be applicable to every language. Starts with a quick overview of Python for those unfamiliar to the language.</li>
+<li><a href="http://algs4.cs.princeton.edu/home/">Algorithms by Robert Sedgewick</a> which is in Java and accompanies <a href="https://www.coursera.org/course/algs4partI">these lectures</a> on Coursera.</li>
+<li><a href="http://www3.cs.stonybrook.edu/~algorith/">The Stony Brook Algorithm Repository</a> - a comprehensive reference of many different data structures and algorithms.</li>
+<li><a href="http://bigocheatsheet.com/">The Big-O Cheat Sheet</a> - a cheat sheet containing links and condensed information about the top most commonly-used/commonly-taught data structures and algorithms.</li>
+</ul></li>
+<li>Books (paper):
+<ul>
+<li><a href="http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844">Introduction to Algorithms</a> - the canonical guide to algorithms and is very comprehensive. The book is language agnostic, moves at an accelerated pace, and is accompanied by lectures <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/index.htm">here</a>.</li>
+<li><a href="http://www.amazon.com/Algorithm-Design-Manual-Steve-Skiena/dp/0387948600">The Algorithm Design Manual</a> - the first half of the book emphasizes the design and analysis of algorithms, and the second half is a catalog of the 75 most important algorithmic problems for reference.</li>
+<li><a href="http://stackoverflow.com/q/1697572/646543">How can I rebuild my base of algorithms/data structures knowledge?</a> - contains links to various recommended books and suggestions for improvement.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<section id="version-control" class="level3">
+<h3 class="anchored" data-anchor-id="version-control">Version control</h3>
+<section id="git" class="level4">
+<h4 class="anchored" data-anchor-id="git">Git</h4>
+<ul>
+<li>Online courses:
+<ul>
+<li><a href="https://www.udacity.com/course/ud775">How to Use Git and GitHub</a> - via Udacity.</li>
+</ul></li>
+<li>Interactive tutorials:
+<ul>
+<li><a href="http://pcottle.github.io/learnGitBranching/">Learn Git Branching</a> - a very visual interactive tutorial starting from the absolute basics with a high emphasis on understanding the internals/what each git command really means.</li>
+<li><a href="https://try.github.io/levels/1/challenges/1">Try Git</a> - an interactive tutorial that teaches basic Git.</li>
+</ul></li>
+<li>Exercises: N/A</li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://www.git-tower.com/learn/ebook/command-line/introduction">Learn Version Control with Git</a> - an introduction to Git for the absolute beginner (via git-tower).</li>
+<li>Git has an <a href="http://git-scm.com/documentation">official reference and book</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#git">More free books</a></li>
+</ul></li>
+<li>Books (paper): N/A</li>
+</ul>
+</section>
+<section id="mercurial" class="level4">
+<h4 class="anchored" data-anchor-id="mercurial">Mercurial</h4>
+<ul>
+<li>Online courses: N/A</li>
+<li>Interactive tutorials: N/A</li>
+<li>Exercises: N/A</li>
+<li>Video tutorials: N/A</li>
+<li>Books and tutorials (online):
+<ul>
+<li><a href="http://hginit.com/01.html">HgInit</a> - a basic introduction to Mercurial.</li>
+<li><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#mercurial">More free books</a></li>
+</ul></li>
+<li>Books (paper): N/A</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

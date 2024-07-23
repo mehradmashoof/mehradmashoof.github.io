@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="GitHub">
+<meta name="dcterms.date" content="2024-07-20">
+
+<title>Econophysics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Mehrad Mashoof</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../content/resources/index.html" aria-current="page"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/mehradmashoof/"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mehradmashoof/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mehradmashoof/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mehrad-Mashoof/"> <i class="bi bi-researchgate" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/resources/Econophysics.html">Econophysics</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Econophysics</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">econophysics</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>GitHub </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 20, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Blockchain_Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blockchain</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Econophysics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Econophysics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Machine_Learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI, ML &amp; Big Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Programming-Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithms &amp; Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Quantum_Computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quantum Computing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#econophysics" id="toc-econophysics" class="nav-link active" data-scroll-target="#econophysics">Econophysics​</a></li>
+  <li><a href="#econophysics-and-chaos-resources-a-curated-list-from-github" id="toc-econophysics-and-chaos-resources-a-curated-list-from-github" class="nav-link" data-scroll-target="#econophysics-and-chaos-resources-a-curated-list-from-github">1. Econophysics and Chaos Resources: A Curated List from GitHub</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#awesome-complexity-awesome" id="toc-awesome-complexity-awesome" class="nav-link" data-scroll-target="#awesome-complexity-awesome">awesome-complexity <img src="https://awesome.re/badge.svg" class="img-fluid" alt="Awesome"></a>
+  <ul>
+  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts">Concepts</a>
+  <ul>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#simple-glossary" id="toc-simple-glossary" class="nav-link" data-scroll-target="#simple-glossary">Simple Glossary</a></li>
+  </ul></li>
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a>
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#agent-modeling-and-artificial-life" id="toc-agent-modeling-and-artificial-life" class="nav-link" data-scroll-target="#agent-modeling-and-artificial-life">Agent modeling and Artificial Life</a></li>
+  <li><a href="#applied-complexity" id="toc-applied-complexity" class="nav-link" data-scroll-target="#applied-complexity">Applied Complexity</a></li>
+  <li><a href="#chaos-and-fractals" id="toc-chaos-and-fractals" class="nav-link" data-scroll-target="#chaos-and-fractals">Chaos and Fractals</a></li>
+  <li><a href="#cybernetics-and-computing" id="toc-cybernetics-and-computing" class="nav-link" data-scroll-target="#cybernetics-and-computing">Cybernetics and Computing</a></li>
+  <li><a href="#dynamical-systems-and-math" id="toc-dynamical-systems-and-math" class="nav-link" data-scroll-target="#dynamical-systems-and-math">Dynamical Systems and Math</a></li>
+  <li><a href="#information-theory" id="toc-information-theory" class="nav-link" data-scroll-target="#information-theory">Information Theory</a></li>
+  <li><a href="#networks" id="toc-networks" class="nav-link" data-scroll-target="#networks">Networks</a></li>
+  <li><a href="#self-organization-and-emergence" id="toc-self-organization-and-emergence" class="nav-link" data-scroll-target="#self-organization-and-emergence">Self organization and emergence</a></li>
+  </ul></li>
+  <li><a href="#articles-and-papers" id="toc-articles-and-papers" class="nav-link" data-scroll-target="#articles-and-papers">Articles and Papers</a></li>
+  <li><a href="#courses-and-tutorials" id="toc-courses-and-tutorials" class="nav-link" data-scroll-target="#courses-and-tutorials">Courses and tutorials</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="econophysics" class="level2">
+<h2 class="anchored" data-anchor-id="econophysics">Econophysics​</h2>
+</section>
+<section id="econophysics-and-chaos-resources-a-curated-list-from-github" class="level2">
+<h2 class="anchored" data-anchor-id="econophysics-and-chaos-resources-a-curated-list-from-github">1. Econophysics and Chaos Resources: A Curated List from GitHub</h2>
+<p><em>Reproduced from GitHub</em> <a href="https://github.com/">https://github.com/<br>
+</a><br>
+<a href="https://github.com/jepemo/awesome-complexity" class="uri">https://github.com/jepemo/awesome-complexity</a></p>
+<p>A curated list of amazingly awesome&nbsp;Complexity Science&nbsp;resources, courses and shiny things inspired by the&nbsp;<a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a>.</p>
+<p>There are&nbsp;<a href="https://github.com/sellisd/awesome-complexity">other sites with</a>&nbsp;curated lists of resources about Complexity science which you can have a look at.</p>
+</section>
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="awesome-complexity-awesome" class="level1">
+<h1><a href="https://github.com/jepemo/awesome-complexity">awesome-complexity</a> <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" class="img-fluid" alt="Awesome"></a></h1>
+<p>A curated list of amazingly awesome <strong>Complexity Science</strong> resources, courses and shiny things inspired by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a>.</p>
+<p>There are <a href="https://github.com/sellisd/awesome-complexity">other sites with</a> curated lists of resources about Complexity science which you can have a look at.</p>
+<ul>
+<li><a href="#awesome-complexity">Awesome Complexity</a>
+<ul>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#books">Books</a>
+<ul>
+<li><a href="#instroduction">Introduction</a></li>
+<li><a href="#agent-modeling-and-artificial-life">Agent modeling and Artificial Life</a></li>
+<li><a href="#applied-complexity">Applied Complexity</a></li>
+<li><a href="#chaos-and-fractals">Chaos &amp; Fractals</a></li>
+<li><a href="#cybernetics-and-computing">Cybernetics &amp; Computing</a></li>
+<li><a href="#dynamical-systems-and-math">Dynamical Systems and Math</a></li>
+<li><a href="#information-theory">Information Theory</a></li>
+<li><a href="#networks">Networks</a></li>
+<li><a href="#self-organization-and-emergence">Self organization and emergence</a></li>
+</ul></li>
+<li><a href="#articles-and-papers">Articles</a></li>
+<li><a href="#courses-and-tutorials">Courses</a></li>
+<li><a href="#other">Other resources</a></li>
+</ul></li>
+</ul>
+<section id="concepts" class="level2">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<section id="definitions" class="level3">
+<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
+<blockquote class="blockquote">
+<p>About complexity science, which is an interdisciplinary field—at the intersection of mathematics, computer science and natural science—that focuses on discrete models of physical systems. In particular, it focuses on complex systems, which are systems with many interacting components. - <a href="http://greenteapress.com/complexity/html/index.html">Think Complexity Book</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Complexity characterises the behaviour of a system or model whose components interact in multiple ways and follow local rules, meaning there is no reasonable higher instruction to define the various possible interactions. - <a href="https://en.wikipedia.org/wiki/Complexity">Wikipedia</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Complexity theory is really a movement of the sciences. Standard sciences tend to see the world as mechanistic…The movement that started complexity looks in the other direction. It’s asking, how do things assemble themselves? How do patterns emerge from these interacting elements? Complexity is looking at interacting elements and asking how they form patterns and how the patterns unfold. - <a href="https://en.wikiquote.org/wiki/Systems_theory">Wikiquote</a></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ComplexityScienceDiagram.png" title="Map of complexity science" class="img-fluid figure-img"></p>
+<figcaption>Map of complexity science</figcaption>
+</figure>
+</div>
+<p><a href="https://en.wikipedia.org/wiki/File:Map-of-complexity-science.jpg">Source</a></p>
+</section>
+<section id="simple-glossary" class="level3">
+<h3 class="anchored" data-anchor-id="simple-glossary">Simple Glossary</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Adaptive_system">Adaptive systems</a> - System that has the ability to adapt to a changing environment.</li>
+<li><a href="https://en.wikipedia.org/wiki/Agent-based_model">Agent Based Modeling</a> - Alass of computational models for simulating the actions and interactions of autonomous agents (both individual or collective entities such as organizations or groups) with a view to assessing their effects on the system as a whole.</li>
+<li><a href="https://en.wikipedia.org/wiki/Attractor">Attractor</a> - In the mathematical field of dynamical systems, an attractor is a set of numerical values toward which a system tends to evolve, for a wide variety of starting conditions of the system.</li>
+<li><a href="https://en.wikipedia.org/wiki/Autopoiesis">Autopoiesis</a> - The ability of a system to create and maintain itself</li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Artificial intelligence</a> - Intelligence demonstrated by machines.</li>
+<li><a href="https://en.wikipedia.org/wiki/Chaos_theory">Chaos</a> - Interdisciplinary theory stating that within the apparent randomness of chaotic complex systems, there are underlying patterns.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cybernetics">Cybernetics</a> - Transdisciplinary approach for exploring regulatory systems—their structures, constraints, and possibilities</li>
+<li><a href="https://en.wikipedia.org/wiki/Complex_network">Complex Network</a> - A Graph (network) with non-trivial topological features.</li>
+<li><a href="https://en.wikipedia.org/wiki/Complex_system">Complex System</a> - System composed of many components which may interact with each other.</li>
+<li><a href="https://en.wikipedia.org/wiki/Developmental_systems_theory">Developmental systems theory</a> - Theoretical perspective (that emphasizes the shared contributions of genes) on biological development, heredity, and evolution.</li>
+<li><a href="https://en.wikipedia.org/wiki/Dissipative_system">Dissipative system</a> - A thermodynamically open system far from thermodynamic equilibrium.</li>
+<li><a href="https://en.wikipedia.org/wiki/Edge_of_chaos">Edge of Chaos</a> - A region of bounded instability (transition space) that engenders a constant dynamic interplay between order and disorder.</li>
+<li><a href="https://en.wikipedia.org/wiki/Emergence">Emergence</a> - Condition of an entity having properties its parts do not have, due to interactions among the parts.</li>
+<li><a href="https://en.wikipedia.org/wiki/Entropy">Entropy</a> - Measure of how many different microstates there are that could give rise to the macrostate that the system is in.</li>
+<li><a href="https://en.wikipedia.org/wiki/Fractal">Fractal</a> - Subset of a Euclidean space for which the Hausdorff dimension strictly exceeds the topological dimension.</li>
+<li><a href="https://en.wikipedia.org/wiki/Holon_(philosophy)">Holon</a> - System that is both a whole and a part.</li>
+<li><a href="https://en.wikipedia.org/wiki/Information_theory">Information Theory</a> - Field that studies the quantification, storage, and communication of information.</li>
+<li><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine learning</a> - Scientific study of algorithms and statistical models that computer systems use to effectively perform a specific task without using explicit instructions, relying on models and inference instead.</li>
+<li><a href="https://en.wikipedia.org/wiki/Phase_transition">Phase Transition</a> - Transition between states of matter.</li>
+<li><a href="https://en.wikipedia.org/wiki/Robustness">Robustness</a> - Ability to tolerate perturbations.</li>
+<li><a href="https://en.wikipedia.org/wiki/Self-organization">Self-Organization</a> - A process where some form of overall order arises from local interactions between parts of an initially disordered system.</li>
+<li><a href="https://en.wikipedia.org/wiki/Simulation">Simulation</a> - Imitation of the operation of a real-world process or system.</li>
+<li>More definitions in the <a href="https://www.complexityexplorer.org/explore/glossary">Complexity Explorer Page</a>.</li>
+</ul>
+</section>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p><a href="https://amzn.to/2t1eTqO"><strong>Complexity: A Guided Tour</strong></a> by <a href="https://scholar.google.es/citations?user=k4gbv2AAAAAJ&amp;hl=ca&amp;oi=ao">Melanie Mitchell</a> - Tour of the sciences of complexity, a broad set of efforts that seek to explain how large-scale complex, organized, and adaptive behavior can emerge from simple interactions among myriad individuals.</p>
+<p><a href="https://amzn.to/2G1Tp5w"><strong>Think Complexity: Complexity Science and Computational Modeling</strong></a> by <a href="https://scholar.google.es/citations?user=GxBFR3sAAAAJ&amp;hl=ca&amp;oi=ao">Allen Downey</a> - Introduction to complexity where you’ll use graphs, cellular automata, and agent-based models to study topics in physics, biology, and economics, using Python as a programming language.</p>
+<p><a href="https://amzn.to/2t1g9Ky"><strong>Vida artificial: del Caos al Orden</strong> (Spanish)</a> by <a href="https://www.amazon.es/JOSE-GABRIEL-SEGARRA-BERENGUER-Libros/s?ie=UTF8&amp;page=1&amp;rh=n%3A599364031%2Ck%3AJOSE%20GABRIEL%20SEGARRA%20BERENGUER">José Gabriel Segarra</a> - Easy introduction to many concepts of complex systems.</p>
+<p><a href="https://amzn.to/2WAsmTS"><strong>Complexification: Explaining a Paradoxical World Through the Science of Surprise</strong></a> by John L. Casti</p>
+<p><a href="https://amzn.to/2WC9ZOm"><strong>Complexity Science: The Warwick Masters Course</strong></a> by Robert S. MacKay - Introduction to the mathematical methods used to understand complexity, with plenty of examples and real-world applications.</p>
+<p><a href="https://amzn.to/2G2apIS"><strong>Complexity: A Very Short Introduction</strong></a> by John Holland - Introduces the key elements and conceptual framework of complexity.</p>
+<p><a href="https://amzn.to/2WvMdnv"><strong>Diversity and Complexity</strong></a> by Scott Page - Introduction to the role of diversity in complex adaptive systems.</p>
+<p><a href="https://amzn.to/2WC6zLU"><strong>Introduction to Nonextensive Statistical Mechanics: Approaching a Complex World</strong></a> by C. Tsallis - A pedagogical introduction to the concepts of:nonlinear dynamics, extensivity of the nonadditive entropy, global correlations, generalization of the standard CLT’s, etc.</p>
+<p><a href="https://amzn.to/2MIyzbW"><strong>Introduction to the Modeling and Analysis of Complex Systems</strong></a> by Hiroki Sayama - Introduction to the Modeling and Analysis of Complex Systems.</p>
+<p><a href="https://amzn.to/2sYx3tn"><strong>Modeling Complex Systems</strong></a> by N. Boccara - This book illustrates how models of complex systems are built up and provides indispensable mathematical tools for studying their dynamics.</p>
+<p><a href="https://amzn.to/2SiIbQ4"><strong>Simplicity in Complexity: An Introduction to Complex Systems</strong></a> by Rajesh R Parwani.</p>
+<p><a href="https://amzn.to/2D22zuR"><strong>Thinking in Systems: A Primer</strong></a> by Donella Meadows - This book brings systems thinking out of the realm of computers and equations and into the tangible world, showing readers how to develop the systems-thinking skills that thought leaders across the globe consider critical for 21st-century life.</p>
+<p><a href="https://link.springer.com/bookseries/5394"><strong>Understanding Complex Systems Springer Series</strong></a> - Promotes new strategies and paradigms for understanding and realizing applications of complex systems research in a wide variety of ﬁelds and endeavors.</p>
+</section>
+<section id="agent-modeling-and-artificial-life" class="level3">
+<h3 class="anchored" data-anchor-id="agent-modeling-and-artificial-life">Agent modeling and Artificial Life</h3>
+<p><a href="https://amzn.to/2WwuLyZ"><strong>Agent-Based and Individual-Based Modeling: A Practical Introduction</strong></a> by Steven F. Railsback and Volker Grimm - This book gives the skills to design, implement, and analyze agent-based models.</p>
+<p><a href="https://amzn.to/2WtMozD"><strong>Agent-Based Models (Quantitative Applications in the Social Sciences)</strong></a> by <a href="https://scholar.google.es/citations?user=q-IegAYAAAAJ&amp;hl=ca&amp;oi=ao">Nigel Gilbert</a> - This book reviews a range of examples of agent-based modeling, describes how to design and build your own models, and considers practical issues such as verification, validation, planning a modeling project, and how to structure a scholarly article reporting the results of agent-based modeling.</p>
+<p><a href="https://amzn.to/2TrGoVV"><strong>An Introduction to Agent-Based Modeling: Modeling Natural, Social, and Engineered Complex Systems with NetLogo</strong></a> by Uri Wilensky and William Rand - A comprehensive description of the core concepts, methods, and applications of ABM.</p>
+<p><a href="https://amzn.to/2t1dlwS"><strong>Agent-Based Models in Economics: A Toolkit</strong></a> by Domenico Delli Gatti - The book discuss the methodological bases of agent-based approaches and demonstrate step-by-step how to build, simulate and analyse ABMs and how to validate their outputs empirically using the data.</p>
+<p><a href="https://amzn.to/2G2PXYv"><strong>The Complexity of Cooperation: Agent-Based Models of Competition and Collaboration</strong></a> by <a href="https://scholar.google.es/citations?user=c_aA0BwAAAAJ&amp;hl=ca&amp;oi=ao">Robert Axelrod</a> - Introductory text on complexity theory and computer modeling in the social sciences.</p>
+<p><a href="https://amzn.to/2WARCtb"><strong>Introduction to Artificial Life</strong></a> by Chris Adami - Theoretical groundwork for understanding the dynamics of systems of self-replicating information, as well as the results of initial experiments carried out with artificial living systems based on this paradigm.</p>
+</section>
+<section id="applied-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="applied-complexity">Applied Complexity</h3>
+<p><a href="https://amzn.to/2UwM2WX"><strong>Increasing Returns and Path Dependence in the Economy (Economics, Cognition, And Society)</strong></a> by W. Brian Arthur - Pioneering work on an important new approach to economics.</p>
+<p><a href="https://amzn.to/2S3jDLi"><strong>Cybernetic Laws of Social Progress: Toward a Critical Social Philosophy of Marxism (Systems science and world order library)</strong></a> by Arvid Aulin</p>
+<p><a href="https://amzn.to/2DOFTA3"><strong>Evolutionary Epistemology, Rationality, and the Sociology of Knowledge</strong></a> by Gerard Radnitzky, W. W. Bartley and Karl Popper - Fundamental ideas of evolutionary epistemology.</p>
+<p><a href="https://amzn.to/2Trfg9A"><strong>An Introduction to Models in the Social Sciences</strong></a> by Charles A. Lave and James G. March - Multidisciplinary introduction to model building in the social sciences.</p>
+<p><a href="https://amzn.to/2TxwHFq"><strong>Business Dynamics: Systems Thinking and Modeling for a Complex World</strong></a> by John D. Sterman John Sterman.</p>
+<p><a href="https://amzn.to/2WvYdVU"><strong>Complex Human Dynamics: From Mind to Societies</strong></a> by Andrzej Nowak, Katarzyna Winkowska-Nowak and David Brée - Research topics in these fields into the language of nonlinear, dynamic and complex systems.</p>
+<p><a href="https://amzn.to/2GlQtAn"><strong>From Matter to Life: Information and Causality</strong></a> by Sara Imari Walker, Paul C. W. Davies, George F. R. Ellis - This book addresses the role of information in life, and how it can make a difference to what we know about the world.</p>
+<p><a href="https://amzn.to/2WCjVHE"><strong>Growing Artificial Societies: Social Science from the Bottom Up</strong></a> by J. M. Epstein and R. L. Axtell</p>
+<p><a href="https://amzn.to/2Sj43KX"><strong>Introduction to Econophysics: Correlations and Complexity in Finance</strong></a> by R. N. Mantegna and H. E. Stanley - Statistical physics concepts such as stochastic dynamics, short- and long-range correlations, self-similarity and scaling, permit an understanding of the global behavior of economic systems.</p>
+<p><a href="https://amzn.to/2G2kPbv"><strong>Modeling Complex Systems for Public Policies</strong></a> by Roger White, Guy Engelen and Inge Uljee - This book describes the theory and practice of modeling the spatial dynamics of urban growth and transformation.</p>
+<p><a href="https://amzn.to/2sYZDL1"><strong>Signs of Life: How Complexity Pervades Biology</strong></a> by R. V. Solé and B. C. Goodwin - This book is an entirely new approach to understanding living systems and will help set the agenda for biology in the coming century.</p>
+<p><a href="https://amzn.to/2WBnmhP"><strong>The Theory of Evolution and Dynamical Systems: Mathematical Aspects of Selection</strong></a> by J. Hofbauer &amp; K. Sigmund - Introduction to dynamical systems and its applications to evolutionary game theory, mathematical ecology, and population genetics.</p>
+</section>
+<section id="chaos-and-fractals" class="level3">
+<h3 class="anchored" data-anchor-id="chaos-and-fractals">Chaos and Fractals</h3>
+<p><a href="https://amzn.to/2WAtaYV"><strong>Chaos: Making a New Science</strong></a> by <a href="https://es.wikipedia.org/wiki/James_Gleick">James Gleick</a> - Describes the Mandelbrot set, Julia sets, and Lorenz attractors without using complicated mathematics. It portrays the efforts of dozens of scientists whose separate work contributed to the developing field. The text remains in print and is widely used as an introduction to the topic for the mathematical layperson.</p>
+<p><a href="https://amzn.to/2GejJZv"><strong>The Fractal Geometry of Nature</strong></a> by Benoit B. Mandelbrot - Definitive overview of the origins of fractal ideas and their new applications.</p>
+<p><a href="https://amzn.to/2G4tjyM"><strong>Chaos and Fractals: New Frontiers of Science</strong></a> by H. Peitgen, H. Jürgens and D. Saupe - This book covers the central ideas and concepts of chaos and fractals as well as many related topics.</p>
+<p><a href="https://amzn.to/2t8mHHv"><strong>Chaos and Fractals: An Elementary Introduction</strong></a> by D. P. Feldman - Elementary introduction to chaos and fractals.</p>
+<p><a href="https://amzn.to/2sXx9kX"><strong>Chaos and Time-series Analysis</strong></a> by J. C. Sprott - An introduction to developments in chaos and related topics in nonlinear dynamics.</p>
+<p><a href="https://amzn.to/2G3CFLo"><strong>Critical phenomena in natural sciences: Chaos, fractals, self-organization, and disorder</strong></a> by Didier Sornette.</p>
+<p><a href="https://amzn.to/2t3RMvz"><strong>Fractals and Chaos Simplified for the Life Sciences</strong></a> by L. S. Leibovitch - Explains the concepts of fractals and chaos and illustrates their uses with examples from biomedical research.</p>
+<p><a href="https://amzn.to/2GgC0FK"><strong>Visual Group Theory</strong></a> by Nathan Carter - This text approaches the learning of group theory visually.</p>
+</section>
+<section id="cybernetics-and-computing" class="level3">
+<h3 class="anchored" data-anchor-id="cybernetics-and-computing">Cybernetics and Computing</h3>
+<p><a href="https://amzn.to/2WzlCFV"><strong>Cybernetics: Second Edition: Or the Control and Communication in the Animal and the Machine</strong></a> by <a href="https://en.wikipedia.org/wiki/Norbert_Wiener">Norbert Wiener</a> - This book contains the first public usage of the term “cybernetics” to refer to self-regulating mechanisms.</p>
+<p><a href="https://amzn.to/2UscTnc"><strong>An Introduction to Cybernetics</strong></a> by W. Ross Ashby - Another introduction to Cybernetics from 1956.</p>
+<p><a href="https://amzn.to/2WtR2h3"><strong>An Introduction to Genetic Algorithms</strong></a> by <a href="https://scholar.google.es/citations?user=k4gbv2AAAAAJ&amp;hl=ca&amp;oi=ao">Melanie Mitchell</a> - Introduction that describes some of the most interesting research in the field and also enables readers to implement and experiment with genetic algorithms on their own.</p>
+<p><a href="https://amzn.to/2TlyBJk"><strong>An Introduction to Kolmogorov Complexity and Its Applications</strong></a> by Ming Li and Paul M.B. Vitányi.</p>
+<p><a href="https://amzn.to/2CWZ0Gs"><strong>Introduction to the Theory of Computation</strong></a> by M. Sisper.</p>
+<p><a href="https://amzn.to/2t38uv2"><strong>Introduction to the Theory of Neural Computation</strong></a> by J. A. Hertz, A. S. Krogh &amp; R. G. Palmer - Introduction to the neural network models currently under intensive study for computational applications.</p>
+<p><a href="https://amzn.to/2MOMy08"><strong>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</strong></a> by T. Hastie, R. Tibshirani and J. Friedman - This book describes the important ideas in a variety of fields such as medicine, biology, finance, and marketing in a common conceptual framework.</p>
+<p><a href="https://amzn.to/2sZ58t1"><strong>The Nature of Code</strong></a> by Daniel Shiffman - This book focuses on a range of programming strategies and techniques behind computer simulations of natural systems, from elementary concepts in mathematics and physics to more advanced algorithms that enable sophisticated visual results.</p>
+<p><a href="https://amzn.to/2Be3U1O"><strong>The Nature of Computation</strong></a> by C. Moore &amp; S. Mertens - Explanation of the field of computational complexity, starting with P and NP-completeness.</p>
+</section>
+<section id="dynamical-systems-and-math" class="level3">
+<h3 class="anchored" data-anchor-id="dynamical-systems-and-math">Dynamical Systems and Math</h3>
+<p><a href="https://amzn.to/2t8x7H7"><strong>Dynamics of Complex Systems</strong></a> by Y. Bar-Yam - Descibes the modern unified study of complex systems.</p>
+<p><a href="https://amzn.to/2Sn2r2Q"><strong>Dynamics: The geometry of behavior</strong></a> by R. Abraham and C. D. Shaw - This book will supplement traditional nonlinear dynamics courses at advanced undergraduate level.</p>
+<p><a href="https://amzn.to/2t33Xc0"><strong>Game Theory: A Nontechnical Introduction</strong></a> by M. Davis - Accessible introduction to enormously important intellectual system with numerous applications to social, economic, political problems.</p>
+<p><a href="https://amzn.to/2sXDxIO"><strong>Mathematics of Complexity and Dynamical Systems</strong></a> by R. Meyers - Reference to the basic tools and concepts of complexity, systems theory, and dynamical systems from the perspective of pure and applied mathematics.</p>
+<p><a href="https://amzn.to/2GgzHCz"><strong>Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering</strong></a> by S. H. Strogatz - This textbook is aimed at newcomers to nonlinear dynamics and chaos, especially students taking a first course in the subject.</p>
+<p><a href="https://amzn.to/2Wxr8Ja"><strong>Principles of System Science</strong></a> by George E. Mobus and Michael C. Kalton - A comprehensive introduction to systems structure, function, and modeling as applied in all fields of science and engineering.</p>
+<p><a href="https://amzn.to/2GePCRP"><strong>Statistical Mechanics: Entropy, Order Parameters and Complexity</strong></a> by J. P. Sethna.</p>
+<p><a href="https://amzn.to/2MJwMDw"><strong>Strategy: An Introduction to Game Theory</strong></a> by J. Watson - Comprehensive introductory game theory textbook, with applications to economics, political science, and social sciences.</p>
+<p><a href="https://amzn.to/2sZ6Ydp"><strong>The Nature of Mathematical Modeling</strong></a> by N. Gershenfeld.</p>
+</section>
+<section id="information-theory" class="level3">
+<h3 class="anchored" data-anchor-id="information-theory">Information Theory</h3>
+<p><a href="https://amzn.to/2Tl6WZ3"><strong>An Introduction to Information Theory: Symbols, Signals and Noise</strong></a> by John R. Pierce - Updated version of the Shannon theory.</p>
+<p><a href="https://amzn.to/2GfmPMN"><strong>Information Theory: A Tutorial Introduction</strong></a> by James V Stone - Another introduction ideal for for novices who wish to learn the essential principles and applications of information theory.</p>
+<p><a href="https://amzn.to/2sZHBbq"><strong>Elements of Information Theory</strong></a> by T. M. Cover and J. A. Thomas - All the essential topics in information theory are covered in detail, including entropy, data compression, channel capacity, rate distortion, network information theory, and hypothesis testing.</p>
+<p><a href="https://amzn.to/2WzXmn2"><strong>Information Theory and Statistics</strong></a> by S. Kullback - Useful text studies logarithmic measures of information and their application to testing statistical hypotheses.</p>
+</section>
+<section id="networks" class="level3">
+<h3 class="anchored" data-anchor-id="networks">Networks</h3>
+<p><a href="https://amzn.to/2t2Q0La"><strong>A First Course in Network Theory</strong></a> by <a href="https://scholar.google.es/citations?user=6z233EAAAAAJ&amp;hl=ca&amp;oi=ao">Ernesto Estrada</a> - Diverse nature of the study of complex networks by balancing the needs of students from very different backgrounds. It references the most commonly used concepts in network theory, provides examples of their applications in solving practical problems, and clear indications on how to analyse their results.</p>
+<p><a href="https://amzn.to/2WzR1Iv"><strong>Complex Networks: Structure, Robustness, and Function</strong></a> by R. Cohen &amp; S. Havlin - Presentation of the structure and function of complex networks, using a range of examples.</p>
+<p><a href="https://amzn.to/2TqGZHJ"><strong>Network Science</strong></a> by Laszlo Barabasi - This book introduces network science to an interdisciplinary audience.</p>
+<p><a href="https://amzn.to/2TqiN8j"><strong>Networks, Crowds, and Markets</strong></a> by D. Easley and J. Kleinberg - This textbook takes an interdisciplinary look at economics, sociology, computing and information science, and applied mathematics to understand networks and behavior.</p>
+<p><a href="https://amzn.to/2WIm7Oa"><strong>Networks: An Introduction</strong></a> by M. E. J. Newman - The book brings together for the first time the most important breakthroughs in each of these fields, mathematics, physics, computer and information sciences, biology, and the social sciences, and presents them in a coherent fashion, highlighting the strong interconnections between work in different areas.</p>
+<p><a href="https://amzn.to/2t1Lmxi"><strong>Social and Economic Networks</strong></a> by M. O. Jackson - A comprehensive introduction to social and economic networks, drawing on the latest findings in economics, sociology, computer science, physics, and mathematics.</p>
+</section>
+<section id="self-organization-and-emergence" class="level3">
+<h3 class="anchored" data-anchor-id="self-organization-and-emergence">Self organization and emergence</h3>
+<p><a href="https://amzn.to/2WyKU7i"><strong>How Nature Works: the science of self-organized criticality</strong></a> by Per Bak - Introduction to Complexity/Self-Organization with a lot of nature examples.</p>
+<p><a href="https://amzn.to/2DOmtey"><strong>Ecodynamics: A New Theory of Societal Evolution</strong></a> by Kenneth E. Boulding - Exposition of how society evolves</p>
+<p><a href="https://amzn.to/2DNFlu0"><strong>The Hypercycle: A principle of natural self-organization</strong></a> by M. Eigen and Peter Schuster</p>
+<p><a href="https://amzn.to/2UC8dvb"><strong>Complex Adaptive Systems: An Introduction to Computational Models of Social Life</strong></a> by J. H. Miller &amp; S. E. Page - Introduction to complex adaptive social systems.</p>
+<p><a href="https://amzn.to/2CWGnm0"><strong>Complex and Adaptive Dynamical Systems: A Primer</strong></a> by Claudius Gros - Introduction to the central concepts that form our modern understanding of complex and emergent behavior.</p>
+<p><a href="https://amzn.to/2SfGbbh"><strong>Self-organization in Biological Systems</strong></a> by S. Camazine, J-L, Deneubourg, N. R. Sneyd, G. Theraula and E. Bonabeau - This book introduces readers to the basic concepts and tools for studying self-organization and then examines numerous examples of self-organization in the natural world.</p>
+<p><a href="https://amzn.to/2BgyDuY"><strong>Self-organized Criticality: Emergent Complex Behavior in Physical and Biological Systems</strong></a> by Henrik Jensen - Introduction to the field of self-organized criticality, and contains an overview of the main research results.</p>
+<p><a href="https://www.uni-kassel.de/upress/online/frei/978-3-89958-069-3.volltext.frei.pdf"><strong>The Emergence of Complexity</strong></a> by Jochen Fromm - This book is about how complexity suddenly appears and emerges in complex systems.</p>
+</section>
+</section>
+<section id="articles-and-papers" class="level2">
+<h2 class="anchored" data-anchor-id="articles-and-papers">Articles and Papers</h2>
+<ul>
+<li>Anderson P. W., K. J. Arrow, and D. Pines (Eds.). <a href="http://www.econ.tuwien.ac.at/lva/compeco.se/artikel/intro_the_economy_as_an_evolving_complex_system_2_sfi_silverberg_web.pdf">The Economy as an Evolving Complex System</a>, Addison-Wesley, Redwood City CA, 1988</li>
+<li>Arthur, W. B.: <a href="http://dimetic.dime-eu.org/dimetic_files/Lect%204%20to%20Cowan%20-%20Arthur.pdf">Competing Technologies, Increasing Returns, and Lock-in by Historical Events</a>, The Economic Journal 99: 1989, pp.&nbsp;106-131.</li>
+<li>Arthur, W. B.: <a href="http://www.adamdell.com/media/file/original/17_Positive_Feedbacks_in_the_Economy.pdf">Positive Feedbacks in the Economy</a>, Scientific American, February 1990, pp.&nbsp;92-99.</li>
+<li>Arthur W. B.: <a href="https://ocw.tudelft.nl/wp-content/uploads/ElFarolArtur1994.pdf">Bounded Rationality and Inductive Behavior</a> (the El Farol Problem), American Economic Review 84, pp.&nbsp;406-411, 1994.</li>
+<li>Ashby W. R. Mechanisms of Intelligence: Writings of Ross Ashby, Intersystems, Salinas CA, 1981.</li>
+<li>Ashby, W. R. Design for a Brain - The Origin of Adaptive Behaviour. Chapman and Hall, London, 1960.</li>
+<li>Axelrod R. M. <a href="http://www.sfs.uni-tuebingen.de/~roland/Literature/Axelrod(81)_the_evolution_of_cooperation.pdf">The Evolution of Cooperation</a>, Basic Books, New York, 1984.</li>
+<li>Bak P. and Chen K.: <a href="http://www.johnboccio.com/courses/Physics120_2008/docs/btw.pdf">Self-Organized Criticality</a>, Scientific American: January 1991, pp.&nbsp;46-53.</li>
+<li>Bennett C. H. <a href="http://www.infoamerica.org/documentos_pdf/bennett.pdf">Dissipation, Information, Computational Complexity and the Definition of Organization</a>. Emerging Syntheses in Science, Pines D. (ed.), Addison-Wesley, Redwood City CA, 1985, pp.&nbsp;215-233.</li>
+<li>Campbell, D. T. “Downward Causation” in Hierarchically Organized Biological Systems. Studies in the Philosophy of Biology, F.J. Ayala and T. Dobzhansky (eds), Macmillan, New York, 1974 .</li>
+<li>Crutchfield, J., Farmer, J.D., Packard, N., and Shaw, R.: Chaos, Scientific American, 255 (6): December 1986, pp.&nbsp;46-57.</li>
+<li>Darwin C. <a href="https://amzn.to/2CYYDuV">The origin of species by means of natural selection or the preservation of favoured races in the struggle for life</a>. (Edited with and introduction by J W Burrow). Penguin classics, 1985. (First published by John Murray, 1859)</li>
+<li>Dawkins R. <a href="https://amzn.to/2ToBM32">The selfish gene</a>, Oxford University Press, Oxford, 1989.</li>
+<li>Dawkins R. <a href="https://amzn.to/2D29epb">The Extended Phenotype: The Gene as a Unit of Selection</a>, Oxford University Press, Oxford, 1983.</li>
+<li>Dawkins R. <a href="https://amzn.to/2t28nA9">The Blind Watchmaker</a>, Longman, London, 1986.</li>
+<li>Eigen M., and R. Winkler-Oswatitsch. <a href="https://amzn.to/2Treyt1">Steps Toward Life: a perspective on evolution</a>. Oxford University Press, New York, 1992.</li>
+<li>Fisher R. A. <a href="https://amzn.to/2t0CBTZ">The Genetical Theory of Natural Selection</a>, 2nd edition, Dover Publications, New York, 1958.</li>
+<li>Forrester, J. <a href="https://amzn.to/2TsrBKM">Industrial Dynamics</a>, MIT Press, Cambridge, MA, 1961.</li>
+<li>Forrester, J. W. <a href="https://amzn.to/2TpTcwd">World Dynamics</a>, Wright-Allen Press, Cambridge, MA, 1973.</li>
+<li>Gell-Mann, M., <a href="https://amzn.to/2sZqqXF">The Quark and the Jaguar: Adventures in the Simple and the Complex</a>, W.H. Freeman, San Francisco, 1994.<br>
+</li>
+<li>Gould S.J., and N. Eldredge. 1977: <a href="https://websites.pmc.ucsc.edu/~pkoch/EART_206/09-0120/Supplemental/Gould%20&amp;%20Eldredge%2077%20Paleobio.pdf">Punctuated equilibria: the tempo and mode of evolution reconsidered</a>. Paleobiology 3, pp.&nbsp;115-151.</li>
+<li>Haken H. Synergetics, Springer, Berlin, 1978.</li>
+<li>Holland J. H. 1992. <a href="https://amzn.to/2WAwtiN">Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology</a>, - Control and Artificial Intelligence, MIT Press, Cambridge MA.</li>
+<li>Holland J.H. <a href="https://amzn.to/2Trdzce">Hidden Order : How Adaptation Builds Complexity</a>, Addison-Wesley 1996.</li>
+<li>Holland J. H., Holyoak K. J., Nisbett R. E. &amp; Thagard P. R. 1986 <a href="https://amzn.to/2S1qhlA">Induction: Processes of Inference, Learning and - Discovery</a>, MIT Press, Cambridge MA.</li>
+<li>Jantsch, E., <a href="https://amzn.to/2Uy0fmt">The Self-Organizing Universe: Scientific and Human Implications of the Emerging Paradigm of Evolution</a>, - Oxford, Pergamon Press, 1979.</li>
+<li>Kauffman S. A.: <a href="http://sfi-edu.s3.amazonaws.com/sfi-edu/production/uploads/sfi-com/dev/uploads/filer/04/d2/04d2f2e3-9484-47e6-9e10-9d1985750b05/91-09-037.pdf">Antichaos and Adaptation</a>, Scientific American: August 1991, pp.&nbsp;78-84</li>
+<li>Kauffman S. A. <a href="https://amzn.to/2TrUAOI">The Origins of Order: Self-Organization and Selection in Evolution</a>, Oxford University Press, New York, 1993</li>
+<li>Kauffman S. A. <a href="https://amzn.to/2UC4bD3">At Home in the Universe: The Search for Laws of Self-Organization and Complexity</a>, Oxford University Press, Oxford, 1995.</li>
+<li>Langton C. G.: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.227.1164&amp;rep=rep1&amp;type=pdf">Computation at the Edge of Chaos: phase transitions and emergent computation</a>, Physica D, 42, 1-3, pp.&nbsp;12-37, 1990.</li>
+<li>Langton, C. G. (Ed.). <a href="https://amzn.to/2t1hi4O">Artificial Life: The Proceedings of an Interdisciplinary Workshop on the Synthesis and Simulation of Living Systems</a>, Addison-Wesley, Redwood City CA, 1989.</li>
+<li>Langton, C. G., Taylor, C., Farmer, J.D., and Rasmussen, S. (Eds.). Artificial Life II: Proceedings of the Second Artificial Life Workshop, Addison-Wesley, Redwood City CA, 1992.</li>
+<li>Langton, C. G. (ed.), <a href="https://amzn.to/2G2yXl4">Artificial Life: An Overview, MIT Press</a>, Cambridge, MA, 1995.</li>
+<li>Maruyama M.: <a href="http://cleamc11.vub.ac.be/books/Maruyama-SecondCybernetics.pdf">The Second Cybernetics: Deviation-Amplifying Mutual Causal Processes</a>, American Scientist 51, No.&nbsp;2: 1963, pp.&nbsp;164-179.</li>
+<li>Maturana H. R., &amp; Varela F. J. <a href="https://amzn.to/2TpOlex">The Tree of Knowledge: The Biological Roots of Understanding</a>, (rev. ed.), Shambhala, Boston, 1992.</li>
+<li>Monod, J. <a href="https://amzn.to/2TlsKUw">Chance and Necessity</a>, Collins, London, 1972.</li>
+<li>Nicolis, G, and Prigogine, I. <a href="https://amzn.to/2DMtY5Q">Self-Organization in Non-Equilibrium Systems</a>, Wiley, New York, 1977.</li>
+<li>Nicolis, G. and I. Prigogine. <a href="https://amzn.to/2DNwZTc">Exploring Complexity</a>, Freeman, New York, 1989.</li>
+<li>Prigogine, I. and Stengers, I. <a href="https://amzn.to/2G6KgJh">Order Out of Chaos</a>, Bantam Books, New York, 1984</li>
+<li>Prigogine, I. <a href="https://amzn.to/2S4uBAv">From Being to Becoming: Time and complexity in the physical sciences</a>, Freeman, San Francisco, 1980.</li>
+<li>Ray, T. S. An Approach to the Synthesis of Life. Artificial Life II, C. G. Langton et al.&nbsp;(Eds.), Addison-Wesley, Redwood City CA, 1992, pp.&nbsp;371-408.</li>
+<li>Shannon, C. E., and W. Weaver. <a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf">The Mathematical Theory of Communication</a> (5th ed.). University of Illinois Press, Chicago, 1963.</li>
+<li>Simon, H. A. <a href="https://amzn.to/2G5Gks2">The Sciences of the Artificial</a> (3rd. edition) MIT Press, Cambridge MA, 1996.</li>
+<li>Thom, R. <a href="https://amzn.to/2GfHrVb">Structural Stability and Morphogenesis</a>, Benjamin, Reading MA, 1975.</li>
+<li>Thompson, D. <a href="https://amzn.to/2Tumn1i">On Growth and Form</a>, Cambridge University Press, Cambridge, 1917.</li>
+<li>Turing, Alan M. <a href="https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf">“On computable numbers, with an application to the Entscheidungsproblem.”</a> Proceedings of the London mathematical society 2.1 (1937): 230-265.</li>
+<li>Varela, F., <a href="https://amzn.to/2Uui6uE">Principles of Biological Autonomy</a>, North Holland, New York, 1979.</li>
+<li>Von Bertalanffy L. <a href="https://amzn.to/2UwQ8OP">General Systems Theory</a> (Revised Edition), George Braziller, New York, 1973.</li>
+<li>Von Foerster H. <a href="http://www.alice.id.tue.nl/references/foerster-2003.pdf#page=14">On self-organising systems and their environments</a>. Self-Organising Systems, M.C. Yovits and S. Cameron (Eds.), Pergamon Press, London, 1960, pp.&nbsp;30-50.</li>
+<li>Von Foerster H. and Zopf, G. (Eds.) Principles of Self-Organization, Pergamon, New York, 1962.</li>
+<li>Von Foerster H. Observing Systems: Selected papers of Heinz von Foerster. Intersystems, Seaside, CA, 1981.</li>
+<li>Von Foerster H. <a href="http://www.alice.id.tue.nl/references/foerster-2003.pdf#page=296">Cybernetics of Cybernetics</a>. Future Systems, Minneapolis, 1996.</li>
+<li>Von Neumann J. <a href="https://amzn.to/2CYy6OA">Theory of Self-Reproducing Automata</a>. (Ed. by A. W. Burks), Univ. of Illinois Press, Champaign, 1966.</li>
+<li>Waldrop M. M. <a href="https://amzn.to/2Glyha3">Complexity: The Emerging Science at the Edge of Order and Chaos</a>, Simon &amp; Schuster, New York, 1992.</li>
+<li>Wolfram S. <a href="https://amzn.to/2TumsC8">Cellular Automata and Complexity: Collected Papers</a>, Addison-Wesley, Reading MA, 1994.</li>
+<li>Zeleny M. (Ed.) 1981, <a href="https://amzn.to/2GeHtg5">Autopoiesis: A Theory of Living Organization</a>, North Holland, New York.</li>
+</ul>
+</section>
+<section id="courses-and-tutorials" class="level2">
+<h2 class="anchored" data-anchor-id="courses-and-tutorials">Courses and tutorials</h2>
+<p><a href="https://www.complexityexplorer.org/courses/89-introduction-to-complexity"><strong>Introduction to Complexity</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - In this course you’ll learn about the tools used by scientists to understand complex systems. The topics you’ll learn about include dynamics, chaos, fractals, information theory, self-organization, agent-based modeling, and networks.</p>
+<p><a href="https://www.complexityexplorer.org/courses/55-introduction-to-information-theory"><strong>Introduction to Information Theory</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Introduces fundamental concepts in information theory. Information theory has made considerable impact in complex systems, and has in part co-evolved with complexity science.</p>
+<p><a href="https://www.complexityexplorer.org/courses/58-introduction-to-computation-theory"><strong>Introduction to Computation Theory</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Basic principles of computation and computational complexity.</p>
+<p><a href="https://www.complexityexplorer.org/courses/94-nonlinear-dynamics-mathematical-and-computational-approaches"><strong>Nonlinear Dynamics: Mathematical and Computational Approaches</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Broad introduction to the field of nonlinear dynamics, focusing both on the mathematics and the computational tools that are so important in the study of chaotic systems.</p>
+<p><a href="https://www.complexityexplorer.org/courses/91-introduction-to-dynamical-systems-and-chaos-fall-2018"><strong>Introduction to Dynamical Systems and Chaos</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Introduction to the modern study of dynamical systems, the interdisciplinary field of applied mathematics that studies systems that change over time.</p>
+<p><a href="https://www.complexityexplorer.org/courses/93-fractals-and-scaling"><strong>Fractals and Scaling</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Overview of how ideas from fractals and scaling are used to study complex systems.</p>
+<p><a href="https://www.complexityexplorer.org/courses/63-algorithmic-information-dynamics-a-computational-approach-to-causality-and-living-systems-from-networks-to-cells-2018"><strong>Algorithmic Information Dynamics: A Computational Approach to Causality and Living Systems From Networks to Cells</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Introduction to concepts from the new field of Algorithm Information Dynamics to search for solutions to fundamental questions about causality.</p>
+<p><a href="https://www.complexityexplorer.org/courses/90-introduction-to-agent-based-modeling-summer-2018"><strong>Introduction to Agent-Based Modeling</strong></a> by the <a href="https://www.complexityexplorer.org/">Complexity Explorer/Santa Fe Institute</a> - Introduction to agent-based modeling to understand and examine a widely diverse and disparate set of complex problems.</p>
+<p><a href="http://complexity.stanford.edu/classes"><strong>The Mathematics of Complexity (BIO 131, Fall 2012)</strong></a> by the <a href="http://complexity.stanford.edu/">Stanford Complexity Group</a> - Many videos about dynamic systems, chaos, fractals, etc.</p>
+<p><a href="https://www.udemy.com/share/100QDQA0sddFxU/"><strong>Complexity science: an introducton</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - Overview to the main areas of complexity science.</p>
+<p><a href="https://www.udemy.com/share/1005tMA0sddFxU/"><strong>Systems Thinking Made Simple</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - By the end of taking this course students should have gained a whole new perspective on the world call systems thinking and will have gained a understanding of the formal language of systems theory that can be used within a wide variety of applications.</p>
+<p><a href="https://www.udemy.com/share/100mefA0sddFxU/"><strong>Complex Adaptive Systems</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - The aim of this course is to give you a solid grasp of the core concepts within the domain of complex adaptive systems theory.</p>
+<p><a href="https://www.udemy.com/share/100rcGA0sddFxU/"><strong>Complex Systems Theory: An Introduction</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - The aim of this course is to give you a solid grasp of the core concepts within the domain of complex systems theory.</p>
+<p><a href="https://www.udemy.com/share/100wpaA0sddFxU/"><strong>Systems Thinking: Essential Concepts</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - You will be able to better think in systems and communicate more effectively using the vocabulary of systems theory.</p>
+<p><a href="https://www.udemy.com/share/100jZqA0sddFxU/"><strong>Understanding The Process of Emergence</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - By the end of this course students will have a solid grasp of the core concepts within emergence theory and will be able to apply them within their specific domain.</p>
+<p><a href="https://www.udemy.com/share/100iaoA0sddFxU/"><strong>Chaos Complexity and Emergence</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a>.</p>
+<p><a href="https://www.udemy.com/share/100hTSA0sddFxU/"><strong>Nonlinear Systems &amp; Chaos: An Introduction</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - By the end of taking this course students will have a solid grasp of the phenomena and origins of nonlinearity and the basic concepts required to begin a more indepth and mathematical understanding of the subject.</p>
+<p><a href="https://www.udemy.com/share/100uuMA0sddFxU/"><strong>Game Theory: How Cooperation and Competition Work</strong></a> by <a href="https://www.udemy.com/share/100F3uA0sddFxU/?xref=E0ETd1tQQ3Z/HEUkMREdLUMWCQ=="><strong>Udemy</strong></a> - By the end of this course you will be able to understand and use the formal models of game theory to interpret situations of both cooperation and competition.</p>
+</section>
+<section id="other" class="level2">
+<h2 class="anchored" data-anchor-id="other">Other</h2>
+<ul>
+<li><a href="http://www.art-sciencefactory.com/complexity-map_feb09.html">Map of Complex systems History</a> - An impressive overview of the evolution of complex systems thinking.</li>
+<li><a href="http://pespmc1.vub.ac.be/EVOCOPUB.html">List of complexity papers</a></li>
+<li><a href="https://www.michelemorrone.eu/glchaosp/">Real time 3D strange attractors scout and hypercomplex fractals</a>(<a href="https://github.com/BrutPitt/glChAoS.P">src</a>)</li>
+<li><a href="http://www.malinc.se/m/Lorenz.php">Interactive Lorenz Attractor</a></li>
+<li><a href="http://www.malinc.se/m/Mandelbrot.php">Interactive Mandelbrot Set</a></li>
+<li><a href="https://www.system.com/graph">System - free, open, and living public resource that aims to explain how anything in the world is connected to everything else.</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

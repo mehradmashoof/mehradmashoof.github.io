@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="GitHub">
+<meta name="dcterms.date" content="2024-07-20">
+
+<title>Blockchain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Mehrad Mashoof</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../content/resources/index.html" aria-current="page"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../content/projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/mehradmashoof/"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mehradmashoof/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mehradmashoof/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mehrad-Mashoof/"> <i class="bi bi-researchgate" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/resources/Blockchain_Resources.html">Blockchain</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Blockchain</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">blockchain</div>
+                <div class="quarto-category">cryptocurrency</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>GitHub </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 20, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Blockchain_Resources.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Blockchain</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Econophysics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Econophysics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Machine_Learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI, ML &amp; Big Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Programming-Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithms &amp; Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../content/resources/Quantum_Computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quantum Computing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#blockchain" id="toc-blockchain" class="nav-link active" data-scroll-target="#blockchain">Blockchain</a>
+  <ul>
+  <li><a href="#blueprint-for-a-new-economy" id="toc-blueprint-for-a-new-economy" class="nav-link" data-scroll-target="#blueprint-for-a-new-economy">Blueprint for a New Economy​</a></li>
+  </ul></li>
+  <li><a href="#blockchain-resources-a-curated-list-from-github" id="toc-blockchain-resources-a-curated-list-from-github" class="nav-link" data-scroll-target="#blockchain-resources-a-curated-list-from-github">Blockchain resources: a curated list from GitHub</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#blockchain-resources" id="toc-blockchain-resources" class="nav-link" data-scroll-target="#blockchain-resources">Blockchain Resources</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a>
+  <ul>
+  <li><a href="#cryptography" id="toc-cryptography" class="nav-link" data-scroll-target="#cryptography">Cryptography</a></li>
+  <li><a href="#blockchain-books" id="toc-blockchain-books" class="nav-link" data-scroll-target="#blockchain-books">Blockchain Books</a></li>
+  <li><a href="#white-papers" id="toc-white-papers" class="nav-link" data-scroll-target="#white-papers">White papers</a></li>
+  <li><a href="#bitcoin" id="toc-bitcoin" class="nav-link" data-scroll-target="#bitcoin">Bitcoin</a></li>
+  <li><a href="#network-effects" id="toc-network-effects" class="nav-link" data-scroll-target="#network-effects">Network Effects</a></li>
+  <li><a href="#ethereum-and-smart-contracts" id="toc-ethereum-and-smart-contracts" class="nav-link" data-scroll-target="#ethereum-and-smart-contracts">Ethereum and Smart Contracts</a></li>
+  <li><a href="#infographics" id="toc-infographics" class="nav-link" data-scroll-target="#infographics">Infographics</a></li>
+  <li><a href="#talks" id="toc-talks" class="nav-link" data-scroll-target="#talks">Talks</a></li>
+  <li><a href="#youtube-channels" id="toc-youtube-channels" class="nav-link" data-scroll-target="#youtube-channels">Youtube Channels</a></li>
+  <li><a href="#courses" id="toc-courses" class="nav-link" data-scroll-target="#courses">Courses</a></li>
+  <li><a href="#documentaries" id="toc-documentaries" class="nav-link" data-scroll-target="#documentaries">Documentaries</a></li>
+  <li><a href="#blockchain-art" id="toc-blockchain-art" class="nav-link" data-scroll-target="#blockchain-art">Blockchain Art</a></li>
+  <li><a href="#explorers" id="toc-explorers" class="nav-link" data-scroll-target="#explorers">Explorers</a></li>
+  <li><a href="#assets" id="toc-assets" class="nav-link" data-scroll-target="#assets">Assets</a></li>
+  <li><a href="#private-blockchain" id="toc-private-blockchain" class="nav-link" data-scroll-target="#private-blockchain">Private Blockchain</a></li>
+  <li><a href="#tutorials" id="toc-tutorials" class="nav-link" data-scroll-target="#tutorials">Tutorials</a></li>
+  <li><a href="#faucets" id="toc-faucets" class="nav-link" data-scroll-target="#faucets">Faucets</a></li>
+  <li><a href="#blogs" id="toc-blogs" class="nav-link" data-scroll-target="#blogs">Blogs</a></li>
+  <li><a href="#articles" id="toc-articles" class="nav-link" data-scroll-target="#articles">Articles</a></li>
+  <li><a href="#consensus-mechanisms" id="toc-consensus-mechanisms" class="nav-link" data-scroll-target="#consensus-mechanisms">Consensus Mechanisms</a>
+  <ul>
+  <li><a href="#pow---proof-of-work" id="toc-pow---proof-of-work" class="nav-link" data-scroll-target="#pow---proof-of-work">PoW - Proof of Work</a></li>
+  <li><a href="#pos---proof-of-stake" id="toc-pos---proof-of-stake" class="nav-link" data-scroll-target="#pos---proof-of-stake">PoS - Proof of Stake</a></li>
+  <li><a href="#dpos---delegated-proof-of-stake" id="toc-dpos---delegated-proof-of-stake" class="nav-link" data-scroll-target="#dpos---delegated-proof-of-stake">DPoS - Delegated Proof of Stake</a></li>
+  <li><a href="#dbft---delegated-byzantine-fault-tolerance" id="toc-dbft---delegated-byzantine-fault-tolerance" class="nav-link" data-scroll-target="#dbft---delegated-byzantine-fault-tolerance">dBFT - Delegated Byzantine Fault Tolerance</a></li>
+  </ul></li>
+  <li><a href="#governance" id="toc-governance" class="nav-link" data-scroll-target="#governance">Governance</a></li>
+  <li><a href="#other-decentralised-tech" id="toc-other-decentralised-tech" class="nav-link" data-scroll-target="#other-decentralised-tech">Other Decentralised Tech</a></li>
+  <li><a href="#discussion-groups" id="toc-discussion-groups" class="nav-link" data-scroll-target="#discussion-groups">Discussion Groups</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="blockchain" class="level2">
+<h2 class="anchored" data-anchor-id="blockchain">Blockchain</h2>
+<section id="blueprint-for-a-new-economy" class="level3">
+<h3 class="anchored" data-anchor-id="blueprint-for-a-new-economy">Blueprint for a New Economy​</h3>
+</section>
+</section>
+<section id="blockchain-resources-a-curated-list-from-github" class="level2">
+<h2 class="anchored" data-anchor-id="blockchain-resources-a-curated-list-from-github">Blockchain resources: a curated list from GitHub</h2>
+<p><em>Reproduced from GitHub</em> <a href="https://github.com/" class="uri">https://github.com/</a></p>
+<p><a href="https://blockchainedindia.github.io/resources/" class="uri">https://blockchainedindia.github.io/resources/</a></p>
+<p>Curated list of blockchain and general cryptocurrency resources</p>
+</section>
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="blockchain-resources" class="level1">
+<h1><a href="https://blockchainedindia.github.io/resources">Blockchain Resources</a></h1>
+<p>Curated list of blockchain and general cryptocurrency resources</p>
+</section>
+<section id="table-of-contents" class="level1">
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="#cryptography">Cryptography</a></li>
+<li><a href="#bitcoin">Bitcoin Books</a></li>
+<li><a href="#blockchain-art">Blockchain Art</a></li>
+<li><a href="#blockchain-books">Blockchain Books</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#documentaries">Documentaries</a></li>
+<li><a href="#ethereum-and-smart-contracts">Ethereum and Smart Contracts</a></li>
+<li><a href="#explorers">Explorers</a></li>
+<li><a href="#infographics">Infographics</a></li>
+<li><a href="#talks">Talks</a></li>
+<li><a href="#white-papers">White Papers</a></li>
+<li><a href="#youtube-channels">Youtube Channels</a></li>
+<li><a href="#assets">Assets</a></li>
+<li><a href="#private-blockchain">Private Blockchains</a></li>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#faucets">Faucets</a></li>
+<li><a href="#blogs">Blogs</a></li>
+<li><a href="#articles">Articles</a></li>
+<li><a href="#other-decentralised-tech">Other Decentralised Tech</a></li>
+<li><a href="#discussion-groups">Discussion Groups</a></li>
+</ul>
+<section id="cryptography" class="level3">
+<h3 class="anchored" data-anchor-id="cryptography">Cryptography</h3>
+<ul>
+<li><a href="http://www.cis.syr.edu/~wedu/Teaching/cis758/LectureNotes_New/Crypto.pdf">Cryptography Basics</a></li>
+<li><a href="https://www.intensecrypto.org/public/">An Intensive Introduction to Cryptography</a></li>
+<li><a href="https://www.binance.vision/security/what-is-pgp">What is PGP?</a> - Binance Academy</li>
+<li><a href="https://www.binance.vision/security/what-is-symmetric-key-cryptography">What Is Symmetric Key Crpytography</a> - Binance Academy</li>
+<li><a href="https://www.binance.vision/security/symmetric-vs-asymmetric-encryption">Symmetric vs.&nbsp;Asymmetric Encryption</a> - Binance Academy</li>
+<li><a href="https://www.binance.vision/security/what-is-public-key-cryptography">What Is Public Key Cryptography</a> - Binance Academy</li>
+<li><a href="https://www.binance.vision/security/history-of-cryptography">History of Cryptography</a> - Binance Academy</li>
+</ul>
+</section>
+<section id="blockchain-books" class="level3">
+<h3 class="anchored" data-anchor-id="blockchain-books">Blockchain Books</h3>
+<ul>
+<li><a href="https://www.amazon.com/Blockchain-Explained-Technology-Cryptocurrency-Revolution/dp/1535315946/ref=pd_sim_14_5?_encoding=UTF8&amp;pd_rd_i=1535315946&amp;pd_rd_r=615DFBPATQX6GX4RBPWP&amp;pd_rd_w=96Va0&amp;pd_rd_wg=M6xmm&amp;psc=1&amp;refRID=615DFBPATQX6GX4RBPWP">Blockchain Explained: A Technology Guide to the Bitcoin and Cryptocurrency Fintech Revolution</a> - R.J Simmons</li>
+<li><a href="https://www.amazon.com/Blockchain-Fast-Simple-Understand-revolution-ebook/dp/B01M1J671W/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1476984683&amp;sr=1-1&amp;keywords=Blockchain+Fast+and+Simple+-+What+It+Is%2C+How+It+Works%2C+Why+It+Matters%3A+Understand+the+basics%2C+join+the+revolution">Blockchain Fast and Simple - What It Is, How It Works, Why It Matters: Understand the basics, join the revolution</a> - Pierro Martini</li>
+<li><a href="https://www.amazon.com/dp/B07588PNMR">Cryptocurrency Investment: How to Invest in Cryptocurrencies and Make Money in the Long-term</a> - Tamas Torok</li>
+<li><a href="https://www.amazon.com/Blockchain-Revolution-Technology-Changing-Business/dp/1101980133/ref=pd_sim_14_11?_encoding=UTF8&amp;pd_rd_i=1101980133&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Blockchain Revolution: How the Technology behind Bitcoin Is Changing Money, Business, and the World</a> - Don and AlexTapscott</li>
+<li><a href="https://www.amazon.com/Blockchain-Revolution-Technology-Changing-Business/dp/1101980133/ref=pd_bxgy_14_img_3?_encoding=UTF8&amp;pd_rd_i=1101980133&amp;pd_rd_r=JMGHCB5WB1SFP0HYMK6E&amp;pd_rd_w=uHeeo&amp;pd_rd_wg=cburT&amp;psc=1&amp;refRID=JMGHCB5WB1SFP0HYMK6E">Blockchain Revolution: The Ultimate Guide to Mastering Bitcoin and How to Use Blockchain for Your Benefit</a> - Phil Stein</li>
+<li><a href="https://www.amazon.com/Blockchain-Ultimate-Understanding-Hidden-Economy/dp/1534839720/ref=pd_sim_14_5?_encoding=UTF8&amp;pd_rd_i=1534839720&amp;pd_rd_r=6W5M79GD2JFECEZDHPJF&amp;pd_rd_w=19drm&amp;pd_rd_wg=DMS0s&amp;psc=1&amp;refRID=6W5M79GD2JFECEZDHPJF">Blockchain The Ultimate Guide to Understanding the Hidden Economy</a> -s Oscar Flynt</li>
+<li><a href="https://www.amazon.com/Blockchain-Blueprint-Economy-Melanie-Swan/dp/1491920491/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1491920491&amp;pd_rd_r=3KQXC5RXYM1R64CDQ0DW&amp;pd_rd_w=YGgzx&amp;pd_rd_wg=udR6C&amp;psc=1&amp;refRID=3KQXC5RXYM1R64CDQ0DW">Blockchain: Blueprint for a New Economy</a> - Melanie Swan</li>
+<li><a href="https://www.amazon.com/Blockchain-Understand-Programming-Contracts-Revolution/dp/1537533371/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1537533371&amp;pd_rd_r=904DCPSY2QZX2VM23XQD&amp;pd_rd_w=3oCFL&amp;pd_rd_wg=jJFBs&amp;psc=1&amp;refRID=904DCPSY2QZX2VM23XQD">Blockchain: Easiest Ultimate Guide To Understand Blockchain</a> - Jared Norton</li>
+<li><a href="https://www.amazon.com/Blockchain-Understanding-Revolution-Financial-Technology/dp/153469093X/ref=pd_sim_14_1?_encoding=UTF8&amp;pd_rd_i=153469093X&amp;pd_rd_r=D7A8BRAQA9GNYQYES830&amp;pd_rd_w=76sME&amp;pd_rd_wg=SCgV1&amp;psc=1&amp;refRID=D7A8BRAQA9GNYQYES830">Blockchain: Quick Start Guide to Understanding Blockchain, the Biggest Revolution in Financial Technology and Beyond Since the Internet</a> - Seth Ramsey</li>
+<li><a href="https://www.amazon.com/Blockchain-Comprehensive-Mastering-Technology-Financial/dp/1537272039/ref=pd_sim_14_9?_encoding=UTF8&amp;pd_rd_i=1537272039&amp;pd_rd_r=D7A8BRAQA9GNYQYES830&amp;pd_rd_w=76sME&amp;pd_rd_wg=SCgV1&amp;psc=1&amp;refRID=D7A8BRAQA9GNYQYES830">Blockchain: The Comprehensive Guide to Mastering the Hidden Economy</a> - Timothy Short</li>
+<li><a href="https://www.amazon.com/Blockchain-Essential-Guide-Understanding-Revolution/dp/1537317504/ref=pd_sim_14_2?_encoding=UTF8&amp;pd_rd_i=1537317504&amp;pd_rd_r=N3211HRZ6T4ETTER3MY3&amp;pd_rd_w=I44Hf&amp;pd_rd_wg=evC6k&amp;psc=1&amp;refRID=N3211HRZ6T4ETTER3MY3">Blockchain: The Essential Guide to Understanding the Blockchain Revolution</a> - Jeff Reed</li>
+<li><a href="https://www.amazon.com/Blockchain-Innovation-Applications-Cryptocurrencies-Technological-ebook/dp/B01G80V3O2/ref=sr_1_2?ie=UTF8&amp;qid=1476985977&amp;sr=8-2&amp;keywords=Blockchain+contracts+and+CyberLaw">Blockchain: The Future of Internet Innovation - Ideas, Applications and Uses for Blockchain Technology</a> - Jerry Kershen</li>
+<li><a href="https://www.amazon.com/Blockchain-Simple-Guide-Everything-Need/dp/1533161577/ref=pd_sim_14_23?_encoding=UTF8&amp;pd_rd_i=1533161577&amp;pd_rd_r=26RQGPJBS5V65WXKFS9Z&amp;pd_rd_w=DJMVN&amp;pd_rd_wg=E1guu&amp;psc=1&amp;refRID=26RQGPJBS5V65WXKFS9Z">Blockchain: The Simple Guide To Everything You Need To Know</a> - Jacob William</li>
+<li><a href="https://www.amazon.com/Bye-Banks-Displaced-Diminished-Disintermediated/dp/0993220649/ref=sr_1_1?ie=UTF8&amp;qid=1476986040&amp;sr=8-1&amp;keywords=Bye+Bye+Banks%3F">Bye Bye Banks?: How Retail Banks are Being Displaced, Diminished and Disintermediated by Tech Startups and What They Can Do to Survive</a> - James Haycock</li>
+<li><a href="https://www.amazon.com/Decentralized-Applications-Harnessing-Blockchain-Technology/dp/1491924543/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1491924543&amp;pd_rd_r=7XN6AJY2PX75QDZTZAPM&amp;pd_rd_w=ZDHwi&amp;pd_rd_wg=oQ9Te&amp;psc=1&amp;refRID=7XN6AJY2PX75QDZTZAPM">Decentralized Applications: Harnessing Bitcoin’s Blockchain Technology</a> - Siraj Raval</li>
+<li><a href="https://www.amazon.com/Financial-Technology-Bundle-FinTech-Blockchain/dp/1533477299/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1533477299&amp;pd_rd_r=D7A8BRAQA9GNYQYES830&amp;pd_rd_w=76sME&amp;pd_rd_wg=SCgV1&amp;psc=1&amp;refRID=D7A8BRAQA9GNYQYES830">Financial Technology: This Book Bundle Includes FinTech and Blockchain</a> - Jacob William</li>
+<li><a href="https://www.amazon.com/Program-Block-Explorer-Python-Bitcoin-ebook/dp/B014B6890G/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1476984581&amp;sr=1-1&amp;keywords=How+to+Program+a+Block+Chain+Explorer+with+Python+and+Bitcoin">How to Program a Block Chain Explorer with Python and Bitcoin</a> - Alex Gorale</li>
+<li><a href="https://www.amazon.com/FINTECH-Book-Technology-Entrepreneurs-Visionaries/dp/111921887X/ref=pd_bxgy_14_img_3?_encoding=UTF8&amp;pd_rd_i=111921887X&amp;pd_rd_r=Z5ZRQN8RG5TEQTMKYHA9&amp;pd_rd_w=qIgXN&amp;pd_rd_wg=wZM9d&amp;psc=1&amp;refRID=Z5ZRQN8RG5TEQTMKYHA9">The Business Blockchain: Promise, Practice, and Application of the Next Internet Technology</a> - William Mougayar</li>
+<li><a href="https://www.amazon.com/FINTECH-Book-Technology-Entrepreneurs-Visionaries/dp/111921887X/ref=pd_bxgy_14_img_3?_encoding=UTF8&amp;pd_rd_i=111921887X&amp;pd_rd_r=Z5ZRQN8RG5TEQTMKYHA9&amp;pd_rd_w=qIgXN&amp;pd_rd_wg=wZM9d&amp;psc=1&amp;refRID=Z5ZRQN8RG5TEQTMKYHA9">The FinTech Book: The Financial Technology Handbook for Investors, Entrepreneurs and Visionaries</a> - Susanne Chishti and Janos Barberis</li>
+<li><a href="https://www.amazon.com/Fourth-Industrial-Revolution-Klaus-Schwab/dp/1944835008/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1476984488&amp;sr=1-1&amp;keywords=The+Fourth+Industrial+Revolution">The Fourth Industrial Revolution</a> - Prof Klaus Schwab</li>
+<li><a href="https://www.amazon.com/Science-Blockchain-Inverted-Forest-Publishing/dp/1522751831/ref=pd_sim_14_10?_encoding=UTF8&amp;pd_rd_i=1522751831&amp;pd_rd_r=FF7D9XVT7EPCACXH29Z8&amp;pd_rd_w=JXBSj&amp;pd_rd_wg=pcc0Z&amp;psc=1&amp;refRID=FF7D9XVT7EPCACXH29Z8">The Science of the Blockchain</a> - Roger Wattenhofer</li>
+<li><a href="https://www.amazon.com/ValueWeb-Fintech-Blockchain-Technologies-Internet/dp/9814677175/ref=pd_sim_14_10?_encoding=UTF8&amp;pd_rd_i=9814677175&amp;pd_rd_r=BCCHSTJWGE32H74XN9GZ&amp;pd_rd_w=2YGDw&amp;pd_rd_wg=UB9kN&amp;psc=1&amp;refRID=BCCHSTJWGE32H74XN9GZ">ValueWeb: How FinTech firms are using mobile and blockchain technologies to create the Internet of Value</a> -Chris Skinner</li>
+<li><a href="https://www.amazon.com/Blockchain-Dummies-Computer-Tech/dp/1119365597">Blockchain for Dummies</a> - Tiana Laurence</li>
+<li><a href="https://www.amazon.in/Mastering-Bitcoin-Programming-Open-Blockchain/dp/9352135741">Mastering Bitcoin Programming</a> - Andreas M. Antonopoulos</li>
+</ul>
+</section>
+<section id="white-papers" class="level3">
+<h3 class="anchored" data-anchor-id="white-papers">White papers</h3>
+<ul>
+<li><a href="http://cseweb.ucsd.edu/~smeiklejohn/files/imc13.pdf">A Fistful of Bitcoins: Characterizing Payments Among Men with No Names</a> - University of San Diego California</li>
+<li><a href="https://www.ecb.europa.eu/paym/pdf/infocus/20160422_infocus_dlt.pdf">A brave new world? What impact will distributed ledger technology have on the financial industry?</a> - The European Central Bank</li>
+<li><a href="https://docs.google.com/document/d/1Bc-kZXROTeMzG6AvH7rrTrUy24UwHoEcgiL7ALHMO0A/pub">An Architecture for the Internet of Money</a> - Meher Roy</li>
+<li><a href="https://www.accenture.com/t20160509T223022__w__/us-en/_acnmedia/PDF-16/Accenture-Strategy-Banking-World-of-Programmable-Assets.pdf">Banking in a world of programmable assets</a> - Accenture</li>
+<li><a href="http://www.macroriskadvisors.com/layout/pdf/bitcoin%20primer%20BTC.pdf">Bitcoin Primer</a> - Macro Risk Advisors</li>
+<li><a href="http://www.bostonfed.org/economic/current-policy-perspectives/2014/cpp1404.pdf">Bitcoin as Money?</a> - Stephanie Lo and J. Christina Wang</li>
+<li><a href="http://research.microsoft.com/pubs/156072/bitcoin.pdf">Bitcoin</a> - Microsoft Research</li>
+<li><a href="http://scet.berkeley.edu/wp-content/uploads/BlockchainPaper.pdf">BlockChain Technology Beyond Bitcoin</a> - University of California,Berkeley</li>
+<li><a href="https://www.dlapiper.com/en/uk/insights/events/2016/04/blockchain-practical-implications/11-apr-2016/">Blockchain: practical implications of a revolutionary technology for financial markets and beyond</a> - DLA Piper</li>
+<li><a href="https://www.provenance.org/whitepaper">Blockchain: the solution for transparency in product supply chains</a> - Project Provenance Ltd</li>
+<li><a href="https://blockstack.org/blockstack.pdf">Blockstack: A Global Naming and Storage System Secured by Blockchains</a> - Muneeb Ali, Jude Nelson, Ryan Shea and Michael J. Freedman</li>
+<li><a href="https://blockstack.org/blockstack-login.pdf">Bootstrapping Trust in Distributed Systems with Blockchains</a> - Muneeb Ali, Jude Nelson, Ryan Shea and Michael J. Freedman</li>
+<li><a href="https://assets.kpmg.com/content/dam/kpmg/pdf/2016/06/kpmg-blockchain-consensus-mechanism.pdf">Consensus – Immutable agreement for the internet of value</a> - KPMG</li>
+<li><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/492972/gs-16-1-distributed-ledger-technology.pdf">Distributed Ledger Technology: beyond block chain</a> - UK Government Chief Scientific Adviser</li>
+<li><a href="http://nakamotoinstitute.org/static/docs/economics-of-bitcoin.pdf">Economics of Bitcoin</a> - Peter Surda</li>
+<li><a href="https://blockstream.com/sidechains.pdf">Enabling Blockchain Innovations with Pegged Sidechains</a> - Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille</li>
+<li><a href="https://blockstack.org/virtualchain.pdf">Extending Existing Blockchains with Virtualchain</a> - Jude Nelson, Muneeb Ali, Ryan Shea and Michael J. Freedman</li>
+<li><a href="http://www.zyen.com/Publications/The%20Impact%20and%20Potential%20of%20Blockchain%20on%20the%20Securities%20Transaction%20Lif....pdf">The Impact and Potential of Blockchain on the Securities Transaction Lifecycle</a> - The Swift Institute</li>
+<li><a href="https://docs.google.com/document/d/1hq52GT0sQ8mJBZ3_qr-LIpZTBFqIDA2WV8vb_1m8i4U/edit#">World Citizenship by Creating Affordable Private Passport Service</a> - Chris Ellis</li>
+</ul>
+</section>
+<section id="bitcoin" class="level3">
+<h3 class="anchored" data-anchor-id="bitcoin">Bitcoin</h3>
+<ul>
+<li><a href="https://www.amazon.com/Cryptocurrencies-bitcoin-alternatives-offer-anonymity/dp/1500682586/ref=pd_sim_14_24?_encoding=UTF8&amp;pd_rd_i=1500682586&amp;pd_rd_r=PMB5GABNHVFM2VHE3WBH&amp;pd_rd_w=6yGsW&amp;pd_rd_wg=yVxm8&amp;psc=1&amp;refRID=PMB5GABNHVFM2VHE3WBH">Anonymous Cryptocurrencies: The rise of bitcoin alternatives that offer true anonymity</a> - Will Martin</li>
+<li><a href="https://www.amazon.com/Bit-How-P2P-Freeing-World-ebook/dp/B00S085TRS/ref=sr_1_1?ie=UTF8&amp;qid=1476985273&amp;sr=8-1&amp;keywords=Bit+by+Bit">Bit by Bit: How P2P Is Freeing the World</a> - Jeffery Tucker</li>
+<li><a href="https://www.amazon.com/Bitcoin-Complete-Beginners-Guide-Master-ebook/dp/B01JU6KD9C/ref=sr_1_2?ie=UTF8&amp;qid=1476986332&amp;sr=8-2&amp;keywords=The+Bitcoin+Tutorial%3A">Bitcoin : A Complete Beginner’s Guide - Master The Game</a> - Luke Sutton</li>
+<li><a href="https://www.amazon.com/Bitcoin-Basics-Creating-Investing-Bitcoins/dp/1508478945/ref=pd_sim_14_4?_encoding=UTF8&amp;pd_rd_i=1508478945&amp;pd_rd_r=YMYPCM376H2JNJ9NVB6D&amp;pd_rd_w=0gtr5&amp;pd_rd_wg=iqdC9&amp;psc=1&amp;refRID=YMYPCM376H2JNJ9NVB6D">Bitcoin Basics</a> - Benjamin Tideas</li>
+<li><a href="https://www.amazon.com/Bitcoin-Decoded-Beginners-Strategies-Cryptocurrencies/dp/061595524X/ref=pd_sim_14_12?_encoding=UTF8&amp;pd_rd_i=061595524X&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Bitcoin Decoded: Bitcoin Beginner’s Guide to Mining and the Strategies to Make Money with Cryptocurrencies</a> - Brett Combs,Tom Mitsoff</li>
+<li><a href="https://www.amazon.com/Bitcoin-Dummies-Prypto/dp/1119076137/ref=pd_sim_14_30?_encoding=UTF8&amp;pd_rd_i=1119076137&amp;pd_rd_r=26RQGPJBS5V65WXKFS9Z&amp;pd_rd_w=DJMVN&amp;pd_rd_wg=E1guu&amp;psc=1&amp;refRID=26RQGPJBS5V65WXKFS9Z">Bitcoin For Dummies</a> - Prypto</li>
+<li><a href="https://www.amazon.com/Bitcoin-Internals-Technical-Guide-ebook/dp/B00DG8EPT0/ref=sr_1_1?ie=UTF8&amp;qid=1476985144&amp;sr=8-1&amp;keywords=Bitcoin+Internals%3A">Bitcoin Internals: A Technical Guide to Bitcoin</a> - Chris Clark</li>
+<li><a href="https://www.amazon.com/Bitcoin-Step-Beginners-Invest-Profit-ebook/dp/B00K5RUKEE/ref=sr_1_1?ie=UTF8&amp;qid=1476986366&amp;sr=8-1&amp;keywords=Bitcoin+Step+by+Step">Bitcoin Step by Step for Beginners: How to Invest and Profit from Bitcoin Today!</a> - Leo Kallstrom</li>
+<li><a href="https://www.amazon.com/Bitcoin-future-money-Dominic-Frisby/dp/1783521023/ref=pd_sim_14_19?_encoding=UTF8&amp;pd_rd_i=1783521023&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Bitcoin The Future of Money</a> - Dominic Frisby</li>
+<li><a href="https://www.amazon.com/Bitcoin-Cryptocurrency-Technologies-Comprehensive-Introduction/dp/0691171696/ref=pd_sim_14_8?_encoding=UTF8&amp;pd_rd_i=0691171696&amp;pd_rd_r=0CHWWTBSREYE58R7P0SX&amp;pd_rd_w=gCU04&amp;pd_rd_wg=gZavr&amp;psc=1&amp;refRID=0CHWWTBSREYE58R7P0SX">Bitcoin and Cryptocurrency Technologies: A Comprehensive Introduction</a> - Arvind Narayanan,Joseph Bonneau,Edward Felten, Andrew Miller,Steven Goldfeder (<a href="https://d28rh4a8wq0iu5.cloudfront.net/bitcointech/readings/princeton_bitcoin_book.pdf?a=1">free version of first draft</a>)</li>
+<li><a href="https://www.amazon.com/Bitcoin-Future-Money-Jose-Pagliery/dp/1629370363/ref=pd_sim_14_14?_encoding=UTF8&amp;pd_rd_i=1629370363&amp;pd_rd_r=NHZ4SY5ACXYYFA2FN5PK&amp;pd_rd_w=WI1XD&amp;pd_rd_wg=LtNFM&amp;psc=1&amp;refRID=NHZ4SY5ACXYYFA2FN5PK">Bitcoin and The Future of Money</a> - Jose Pagliery</li>
+<li><a href="https://www.amazon.com/Bitcoin-Befuddled-Conrad-Barski/dp/1593275730/ref=pd_sim_14_8?_encoding=UTF8&amp;pd_rd_i=1593275730&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Bitcoin for the Befuddled</a> - Conrad Barski and Chris Wilmer</li>
+<li><a href="https://www.amazon.com/Bitcoin-English-Understanding-HOW-Works-ebook/dp/B00X09LBX8/ref=sr_1_1?ie=UTF8&amp;qid=1476985191&amp;sr=8-1&amp;keywords=Bitcoin+in+English">Bitcoin in English</a> - Peter H Le</li>
+<li><a href="https://www.amazon.com/Bitcoin-Mastering-Cyptocurrency-Reinventing-Currencies/dp/153342733X/ref=pd_sim_14_6?_encoding=UTF8&amp;pd_rd_i=153342733X&amp;pd_rd_r=TJJ3Y2F85RACYQSF23GZ&amp;pd_rd_w=kwfLQ&amp;pd_rd_wg=koGbV&amp;psc=1&amp;refRID=TJJ3Y2F85RACYQSF23GZ">Bitcoin: Mastering Bitcoin &amp; Cyptocurrency for Beginners</a> - Tim Harris</li>
+<li><a href="https://www.amazon.com/Digital-Gold-Bitcoin-Millionaires-Reinvent/dp/0062362496/ref=pd_sim_14_1?_encoding=UTF8&amp;pd_rd_i=0062362496&amp;pd_rd_r=D7KMJCP493PPH9ADVPCR&amp;pd_rd_w=g5Hrb&amp;pd_rd_wg=KsfK5&amp;psc=1&amp;refRID=D7KMJCP493PPH9ADVPCR">Digital Gold: The Untold Story of Bitcoin</a> - Nathaniel Popper</li>
+<li><a href="https://www.amazon.com/Everything-selling-investing-Bitcoin-Technology/dp/1493699474/ref=pd_sim_14_17?_encoding=UTF8&amp;pd_rd_i=1493699474&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Everything you need to know about buying, selling and investing in Bitcoin</a> - A. H Smithers</li>
+<li><a href="https://www.amazon.com/Mastering-Bitcoin-Unlocking-Digital-Cryptocurrencies/dp/1449374042/ref=sr_1_1?ie=UTF8&amp;qid=1476978890&amp;sr=8-1&amp;keywords=Mastering+Bitcoin%3A+Unlocking+Digital+Cryptocurrencies">Mastering Bitcoin: Unlocking Digital Cryptocurrencies</a> Andreas M. Antonopoulos</li>
+<li><a href="https://www.amazon.com/Age-Cryptocurrency-Bitcoin-Challenging-Economic/dp/1250065631/ref=pd_sim_14_6?_encoding=UTF8&amp;pd_rd_i=1250065631&amp;pd_rd_r=7XN6AJY2PX75QDZTZAPM&amp;pd_rd_w=ZDHwi&amp;pd_rd_wg=oQ9Te&amp;psc=1&amp;refRID=7XN6AJY2PX75QDZTZAPM">The Age of Cryptocurrency: How Bitcoin and Digital Money are challenging the Global Economic Order</a> - Paul Vigna and Michael J. Casey</li>
+<li><a href="https://www.amazon.com/Anatomy-Money-like-Informational-Commodity-Bitcoin-ebook/dp/B00MEAO7XK/ref=sr_1_1?ie=UTF8&amp;qid=1476985224&amp;sr=8-1&amp;keywords=The+Anatomy+of+a+Money">The Anatomy of a Money-Like Informational Commodity: A study of Bitcoin</a> - Tim Swanson</li>
+<li><a href="https://www.amazon.com/Bitcoin-Bible-Gold-Benjamin-Guttmann/dp/3732296962/ref=pd_sim_14_18?_encoding=UTF8&amp;pd_rd_i=3732296962&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">The Bitcoin Bible</a> - Benjamin Guttmann</li>
+<li><a href="https://www.amazon.com/Bitcoin-Big-Bang-Alternative-Currencies/dp/1118963660/ref=pd_sim_14_13?_encoding=UTF8&amp;pd_rd_i=1118963660&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">The Bitcoin Big Bang: How Alternative Currencies Are About to Change the World</a> - Brian Kelly</li>
+<li><a href="https://www.amazon.com/Bitcoin-Tutor-Unlocking-Secrets/dp/0979864917/ref=pd_sim_14_5?_encoding=UTF8&amp;pd_rd_i=0979864917&amp;pd_rd_r=QZN41AYGXJSCS7Q32WA7&amp;pd_rd_w=2i7o1&amp;pd_rd_wg=nbCJJ&amp;psc=1&amp;refRID=QZN41AYGXJSCS7Q32WA7">The Bitcoin Tutor: Unlocking the Secrets of Bitcoin</a> - Marc A. Carignan</li>
+<li><a href="https://www.amazon.com/Bitcoin-Tutorial-understanding-blockchain-technology-ebook/dp/B01EP9SVE8/ref=sr_1_1?ie=UTF8&amp;qid=1476986332&amp;sr=8-1&amp;keywords=The+Bitcoin+Tutorial%3A">The Bitcoin Tutorial: Develop an intuitive understanding of the currency and blockchain technology</a> - Bruce Kleinman</li>
+<li><a href="https://www.amazon.com/Black-Book-Bitcoin-Step-Step/dp/1519284527/ref=pd_sim_14_22?_encoding=UTF8&amp;pd_rd_i=1519284527&amp;pd_rd_r=PMB5GABNHVFM2VHE3WBH&amp;pd_rd_w=6yGsW&amp;pd_rd_wg=yVxm8&amp;psc=1&amp;refRID=PMB5GABNHVFM2VHE3WBH">The Black Book of Bitcoin: A Step-by-Step Bitcoin Guide on Everything You Need to Know About this New Currency</a> - Mark Janniro</li>
+<li><a href="https://www.amazon.com/Book-Satoshi-Collected-Writings-Nakamoto/dp/0996061312/ref=pd_sim_14_8?_encoding=UTF8&amp;pd_rd_i=0996061312&amp;pd_rd_r=9QB4ZB20S6CY4NGE029X&amp;pd_rd_w=2TjP2&amp;pd_rd_wg=VjLqC&amp;psc=1&amp;refRID=9QB4ZB20S6CY4NGE029X">The Book of Satoshi</a> - Paul Champagne</li>
+<li><a href="https://www.amazon.com/Digital-Money-Game-Competing-multi-trillion-ebook/dp/B00LZ3T66K/ref=sr_1_1?ie=UTF8&amp;qid=1476985249&amp;sr=8-1&amp;keywords=The+Digital+Money+Game%3A">The Digital Money Game: Competing in the multi-trillion dollar payments industry</a> - Charmaine Oak</li>
+<li><a href="https://www.amazon.com/Internet-Money-Andreas-M-Antonopoulos/dp/1537000454/ref=pd_bxgy_14_img_2?_encoding=UTF8&amp;pd_rd_i=1537000454&amp;pd_rd_r=XPR2XE7MNFCYAB70VZDM&amp;pd_rd_w=xn5TU&amp;pd_rd_wg=4Sqi0&amp;psc=1&amp;refRID=XPR2XE7MNFCYAB70VZDM">The Internet of Money - Andreas M Antonopoulos</a></li>
+<li><a href="https://www.amazon.com/Understanding-Bitcoin-Cryptography-Engineering-Economics/dp/1119019168/ref=pd_sim_14_16?_encoding=UTF8&amp;pd_rd_i=1119019168&amp;pd_rd_r=KF66S03S94P6CMSN0K29&amp;pd_rd_w=Dibne&amp;pd_rd_wg=jRGoU&amp;psc=1&amp;refRID=KF66S03S94P6CMSN0K29">Understanding Bitcoin: Cryptography, Engineering and Economics</a> - Pedro Franco</li>
+<li><a href="https://www.amazon.com/Virtual-Billions-Genius-League-Bitcoin/dp/163388144X/ref=sr_1_1?ie=UTF8&amp;qid=1476986258&amp;sr=8-1&amp;keywords=Virtual+Billions%3A+The+Genius">Virtual Billions: The Genius, the Drug Lord, and the Ivy League Twins behind the Rise of Bitcoin</a> - Eric Geissinger</li>
+<li><a href="https://www.amazon.com/Wildcat-Currency-Virtual-Revolution-Transforming/dp/0300186134/ref=sr_1_1?ie=UTF8&amp;qid=1476986207&amp;sr=8-1&amp;keywords=Wildcat+Currency">Wildcat Currency</a> - Edward Castronova</li>
+</ul>
+</section>
+<section id="network-effects" class="level3">
+<h3 class="anchored" data-anchor-id="network-effects">Network Effects</h3>
+<ul>
+<li><a href="http://vitalik.ca/general/2017/07/27/metcalfe.html">A Note on Metcalfe’s Law, Externalities and Ecosystem Splits</a> by Vitalik Buterin</li>
+<li><a href="https://media.consensys.net/exploring-continuous-token-models-towards-a-million-networks-of-value-fff153175776">Continuous Token Models: Towards a Million Networks of Value</a> by Simon de la Rouviere</li>
+<li><a href="https://medium.com/@cdixon/crypto-tokens-a-breakthrough-in-open-network-design-e600975be2ef">Crypto Tokens: A breakthrough in open network design</a> by Chris Dixon</li>
+<li><a href="http://blog.eladgil.com/2017/12/bitcoin-network-effects_11.html">Bitcoin Network Effects</a></li>
+<li><a href="https://medium.com/@rzurrer/keepers-workers-that-maintain-blockchain-networks-a40182615b66">Keepers — Workers that Maintain Blockchain Networks</a></li>
+<li><a href="https://multicoin.capital/2017/08/28/smart-contract-network-effect-fallacy/">Smart-Contract Network Effect Fallacy</a></li>
+</ul>
+</section>
+<section id="ethereum-and-smart-contracts" class="level3">
+<h3 class="anchored" data-anchor-id="ethereum-and-smart-contracts">Ethereum and Smart Contracts</h3>
+<ul>
+<li><a href="https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51#.43e2aeta8">A Proof of Stake Design Philosophy</a> - Vitalik Buterin</li>
+<li><a href="https://www.amazon.com/BLOCKCHAIN-CONTRACTS-CYBERLAW-PAVAN-DUGGAL-ebook/dp/B019S2I1CE/ref=sr_1_1?ie=UTF8&amp;qid=1476985977&amp;sr=8-1&amp;keywords=Blockchain+contracts+and+CyberLaw">Blockchain contracts and CyberLaw</a> - Pavan Duggal</li>
+<li><a href="https://www.gitbook.com/book/ethereumbuilders/guide/details">Ethereum Builder’s Guide</a> - Ethereum</li>
+<li><a href="https://ethereum.gitbooks.io/frontier-guide/">Ethereum Frontier Guide</a> - Ethereum</li>
+<li><a href="https://www.amazon.com/Ethereum-everything-investment-Blockchain-Cryptocurrency-ebook/dp/B01IC6NT8S/ref=sr_1_1?ie=UTF8&amp;qid=1476984793&amp;sr=8-1&amp;keywords=Ethereum%3A+A+look+into+the+world+of+Ethereum+and+everything+you+need+to+know+about+it%27s+trade+and+investment%21">Ethereum: A look into the world of Ethereum and everything you need to know about it’s trade and investment</a> - Ben Abner</li>
+<li><a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=Ethereum%3A+The+Complete+Beginners+Guide">Ethereum: The Complete Beginners Guide -Blockchain, Cryptocurrencies, Ethereum</a> - Ray Hammond</li>
+<li><a href="https://www.amazon.com/FinTech-Financial-Technology-Blockchain-Contracts-ebook/dp/B01MEFL03W/ref=sr_1_1?ie=UTF8&amp;qid=1476985691&amp;sr=8-1&amp;keywords=FinTech%3A+Financial+Technology+and+Modern+Finance+in+the+21st+Century">FinTech: Financial Technology and Modern Finance in the 21st Century</a> - Jeff Reed</li>
+<li><a href="https://www.amazon.com/Great-Chain-Numbers-Contracts-Management-ebook/dp/B00IRUBMXO/ref=sr_1_1?ie=UTF8&amp;qid=1476985949&amp;sr=8-1&amp;keywords=Great+Chain+of+Numbers%3A+A+Guide+to+Smart+Contracts%2C+Smart+Property+and+Trustless+Asset+Management">Great Chain of Numbers: A Guide to Smart Contracts, Smart Property and Trustless Asset Management</a> - Tim Swanson</li>
+<li><a href="https://www.amazon.com/Investing-Ethereum-Complete-Easily-Cryptocurrencies/dp/1537677209/ref=sr_1_fkmr0_1?ie=UTF8&amp;qid=1476985775&amp;sr=8-1-fkmr0&amp;keywords=Ethereum%3A+The+Complete+Beginners+Guide">Investing In Ethereum: The Complete Guide To Smart Investing - Learn How To Easily Profit From Cryptocurrencies!</a> - Thomas Sanders</li>
+<li><a href="https://www.amazon.com/Investing-Ethereum-Learning-Profiting-Cryptocurrencies/dp/153530281X/ref=pd_sim_14_5?_encoding=UTF8&amp;pd_rd_i=153530281X&amp;pd_rd_r=EH8VPZEJ5BMM540BQEZW&amp;pd_rd_w=CywQ3&amp;pd_rd_wg=p4U9s&amp;psc=1&amp;refRID=EH8VPZEJ5BMM540BQEZW">Investing in Ethereum: The Ultimate Guide to Learning and Profiting from–Cryptocurrencies</a> - Oscar Flynt</li>
+<li><a href="https://www.amazon.com/Investing-Ethereum-Understanding-Cryptocurrencies-Investor-ebook/dp/B01DD6XVJE/ref=sr_1_1?ie=UTF8&amp;qid=1476985905&amp;sr=8-1&amp;keywords=investing+in+Ethereum%3A+Understanding">Investing in Ethereum: Understanding Cryptocurrencies for the Smart Investor</a> - Michael K Nungesser</li>
+<li><a href="https://www.gitbook.com/book/smart-contract-japan/prictical-guide-of-smart-contracts/details">Practical Guide to Smart Contracts</a> - Smart Contract Japan</li>
+<li><a href="https://www.amazon.com/Smart-Contracts-Blockchain-Cryptocurrency-Exchange-ebook/dp/B01IQJM53Q/ref=sr_1_1?ie=UTF8&amp;qid=1476984876&amp;sr=8-1&amp;keywords=Smart+Contracts%3A+How+to+Use+Blockchain">Smart Contracts: How to Use Blockchain Smart Contracts for Cryptocurrency Exchange</a> - Oscar Flynt</li>
+<li><a href="https://www.amazon.com/Smart-Contracts-Essential-Blockchain-Cryptocurrency-ebook/dp/B01LXGO7GH/ref=sr_1_1?ie=UTF8&amp;qid=1476985747&amp;sr=8-1&amp;keywords=Smart+Contracts%3A+The+Essential+Guide">Smart Contracts: The Essential Guide to Using Blockchain Smart Contracts for Cryptocurrency Exchange</a> - Jeff Reed</li>
+<li><a href="https://www.amazon.com/Smart-Contracts-Ultimate-Blockchain-Cryptocurrency-ebook/dp/B01LYK175F/ref=sr_1_2?ie=UTF8&amp;qid=1476984876&amp;sr=8-2&amp;keywords=Smart+Contracts%3A+How+to+Use+Blockchain">Smart Contracts: The Ultimate Guide To Blockchain Smart Contracts - Learn How To Use Smart Contracts For Cryptocurrency Exchange!</a> - Terry Parker</li>
+<li><a href="https://www.amazon.com/Modern-Ethereum-Ryan-Venter-ebook/dp/B01KIRQZ0S/ref=sr_1_1?ie=UTF8&amp;qid=1476985723&amp;sr=8-1&amp;keywords=The+Modern+Ethereum">The Modern Ethereum</a> - Ryan Venter</li>
+<li><a href="https://www.gitbook.com/book/gavofyork/turboethereum/details">TurboEthereum Guide</a> - Gavin Wood</li>
+<li><a href="https://cryptozombies.io/en/course/">Crypto Zombies</a></li>
+</ul>
+</section>
+<section id="infographics" class="level3">
+<h3 class="anchored" data-anchor-id="infographics">Infographics</h3>
+<ul>
+<li><a href="https://i.imgur.com/kVF3kFu.png">Bitcoin’s History 2008-2014</a></li>
+<li><a href="https://i.imgur.com/fZyX3Od.jpg">How a Transaction Works</a></li>
+</ul>
+</section>
+<section id="talks" class="level3">
+<h3 class="anchored" data-anchor-id="talks">Talks</h3>
+<ul>
+<li><a href="https://blockchainedindia.com/talks">All Blockchained India Talks</a></li>
+<li><a href="https://www.youtube.com/watch?v=7-vYEsfsa30">Balaji Srinivasan gives a quick talk at Goldman Sachs. (14 min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=cOubCHLXT6A">Balaji Srinivasan on Silicon Valley’s ultimate exit, the USA the Microsoft of nations (16 min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=IgETC2JMUBI">Beyond Bitcoin - Block Chains and the Future of Trustless Computing (27 min)</a></li>
+<li><a href="https://www.youtube.com/watch?t=26&amp;v=DyAufA2lWn0">Bitcoin Is Exciting Because It’s Cheap</a> - Bill Gates</li>
+<li><a href="http://youtu.be/jaHqtXvGxy4">Bitcoin threatens Kleptocracy (7 min):</a></li>
+<li><a href="https://www.ted.com/talks/paul_kemp_robertson_bitcoin_sweat_tide_meet_the_future_of_branded_currency?language=en">Bitcoin. Sweat. Tide. Meet the future of branded currency.(11min)</a> - Paul Kemp-Robertson</li>
+<li><a href="https://www.youtube.com/watch?v=CdVVECKKSXo">Convergex Group, Nick Colas (3min):</a></li>
+<li><a href="https://www.youtube.com/watch?v=TANjGSo16Uk">Defining bitcoin ownership, 2 min</a></li>
+<li><a href="http://vimeo.com/94697840">Ending the Federal Reserve’s Monopoly (6 min):</a></li>
+<li><a href="https://www.youtube.com/watch?v=SNssKmeXrGs">Everything You Need to Know About Bitcoin</a> - Reihan Salams</li>
+<li><a href="https://www.youtube.com/watch?v=6qZwl7mukZ8">How Cryptocurrencies Can Succeed: the Stripe Perspective(20min)</a> - Greg Brockman</li>
+<li><a href="https://www.ted.com/talks/don_tapscott_how_the_blockchain_is_changing_money_and_business?language=en">How the Blockchain is Changing Money and Business (19 min)</a> - Don Tapscott</li>
+<li><a href="https://www.youtube.com/watch?v=s0luLPVHkO4">Internet vs Bitcoin (3min):</a></li>
+<li><a href="https://www.youtube.com/watch?v=24ce5tV-pgg">Join The Bitcoin Revolution (4min):</a></li>
+<li><a href="https://www.youtube.com/watch?v=0GL9PTQiqxw">TEDx, Crytpocurrencies like Bitcoin are coming, and it’s a good thing (11min):</a> - Juan Llanos</li>
+<li><a href="http://www.youtube.com/watch?v=YIVAluSL9SUA">Powerful Technology Transforming Society: (6min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=slFuj5N4twc">Quick Introduction to Bitcoin (5min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=_bmlVqs9qSY">Stefan Molyneux- Money, Power and Politics (30min):</a></li>
+<li><a href="https://www.youtube.com/watch?v=eyU3TgQqtV8">Stopping War: (1 min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=WI1pbHi1fww">TEDx, Distributing Power &amp; Trust (18min)</a> - Eric Spano</li>
+<li><a href="https://www.youtube.com/watch?v=XotOwt8bTeI&amp;feature=youtu.be">Testimony for the Australian Senate Commitee on Economics References(36min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=mD4L7xDNCmA">The Future of Bitcoin: New Applications and Rebuilding the banking system: (28min)</a> - Mike Hearn</li>
+<li><a href="http://youtu.be/gD4llSr-Ik8">The Story of Genesis: (3min)</a></li>
+<li><a href="https://www.youtube.com/watch?v=97ufCT6lQcY">The future will be decentralized (14mins)</a> - Charles Hoskinson</li>
+<li><a href="http://youtu.be/IP0jCjyrew8">Xapo, the history of money (5 min):</a></li>
+</ul>
+</section>
+<section id="youtube-channels" class="level3">
+<h3 class="anchored" data-anchor-id="youtube-channels">Youtube Channels</h3>
+<ul>
+<li><a href="https://www.youtube.com/user/aantonop">Andreas Antonopolous</a></li>
+<li><a href="https://www.youtube.com/channel/UCJaTFo0_z9lEG_v7L_LT2pw/videos">AirBitz</a></li>
+<li><a href="https://www.youtube.com/user/JellyBaby68/videos">Andy Ofiesh</a></li>
+<li><a href="https://www.youtube.com/BinanceAcademy">Binance Academy</a></li>
+<li><a href="https://www.youtube.com/user/JellyBaby68/videos">Bitcoin Embassy</a></li>
+<li><a href="https://www.youtube.com/user/BitcoinFoundation/videos">Bitcoin Foundation</a></li>
+<li><a href="http://bitcoinlectures.tv">BitcoinLectures.tv</a></li>
+<li><a href="https://www.youtube.com/channel/UCt-Po2gFQxiUngwJXh6s04w/videos">Bitcoin Wednesday</a></li>
+<li><a href="https://www.youtube.com/channel/UCJ5uHx90mZGlK0lC-GSmtzw/videos">Blockchain University</a></li>
+<li><a href="https://www.youtube.com/channel/UC3J2iHnyt2JtOvtGVf_jpHQ">Blockstack</a></li>
+<li><a href="https://www.youtube.com/user/BruceFenton/videos">Bruce Fenton First Mover</a></li>
+<li><a href="https://www.youtube.com/user/Coinbrief/videos">Coin Brief</a></li>
+<li><a href="https://www.youtube.com/channel/UCFBMJMfA6WcmoIOIb81JE0g">Cryptonauts</a></li>
+<li><a href="https://www.youtube.com/user/deBitcoin/videos">deBitcoin</a></li>
+<li><a href="https://www.youtube.com/user/decentralTV/videos">Decentral.tv</a></li>
+<li><a href="https://www.youtube.com/user/TimothyDraper/videos">Draper University</a></li>
+<li><a href="https://www.youtube.com/user/EtherCasts">EtherCasts</a></li>
+<li><a href="https://www.youtube.com/user/ethereumproject">Ethereum Project</a></li>
+<li><a href="https://www.youtube.com/watch?v=U_LK0t_qaPo">Ethereum for Dummies - Dr.&nbsp;Gavin Wood</a></li>
+<li><a href="https://www.youtube.com/user/Cryptoeveryday/videos">EverydayCrpto</a></li>
+<li><a href="https://www.youtube.com/user/LetsTalkBitcoinChan">Let’s Talk Bitcoin</a></li>
+<li><a href="https://www.youtube.com/user/MITBitcoinClub/videos">MIT Bitcoin Club</a></li>
+<li><a href="https://www.youtube.com/watch?v=r7GVVk8v2Ik">Introduction to Ethereum and Smart Contracts</a></li>
+<li><a href="https://www.youtube.com/channel/UCOLeHoKV7SHwAAS0zBwsV-A/videos">SF Bitcoin Meetup Industry</a></li>
+<li><a href="https://www.youtube.com/user/IamSatoshiNakamoto/videos">Satoshi Pollen Technical</a></li>
+<li><a href="Industy Info, Technical">Texas Bitcoin Conference</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLHRxVckaE8daSH4OEReWshCKWu3iIOIS-">Trust Disrupted</a></li>
+<li><a href="https://www.youtube.com/user/MScDigitalCurrency/videos">University Of Nicosia</a></li>
+<li><a href="https://www.youtube.com/channel/UCgo7FCCPuylVk4luP3JAgVw/videos">WBN</a></li>
+<li><a href="Industry Info, Fun, Entertainment">World Crypto Network</a></li>
+</ul>
+</section>
+<section id="courses" class="level3">
+<h3 class="anchored" data-anchor-id="courses">Courses</h3>
+<ul>
+<li><a href="https://www.coursera.org/learn/cryptocurrency">Bitcoin and Cryptocurrency Technologies</a> - Princeton University</li>
+<li><a href="https://www.udemy.com/bitcoin-or-how-i-learned-to-stop-worrying-and-love-crypto/#/">Bitcoin or How I learned to stop worrying and love Crypto</a> - Udemy</li>
+<li><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it">Bitcoin</a> - Khan Academy Series</li>
+<li><a href="https://crypto.stanford.edu/cs251/">Crypto Currencies, the Blockchain, and Smart Contracts</a> - Standford</li>
+<li><a href="https://www.udemy.com/ethereum-developer/">Ethereum Developer: Build A Decentralised Blockchain App</a> - Udemy</li>
+<li><a href="https://www.pluralsight.com/courses/bitcoin-decentralized-technology">Introduction to Bitcoin and Decentralized Technology By Scott Driscoll</a> - Pluralsight</li>
+<li><a href="https://www.udemy.com/the-basics-of-blockchain/">The Basics of Blockchain: A Beginner’s Guide to Blockchain</a> - Udemy</li>
+<li><a href="https://www.udemy.com/ethereum/?couponCode=DEVCON">The Complete Ethereum Course</a> - udemy</li>
+<li><a href="https://www.upfolio.com/guides">Learn About Bitcoin, Ethereum, Cryptocurrency and Blockchain</a> - Upfolio</li>
+</ul>
+</section>
+<section id="documentaries" class="level3">
+<h3 class="anchored" data-anchor-id="documentaries">Documentaries</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=LJsbebFyM48">Banking on Bitcoin(Trailer)</a></li>
+<li><a href="https://www.youtube.com/watch?v=BrRXP1tp6Kw">Bitcoin in Uganda</a></li>
+<li><a href="http://www.disclose.tv/action/viewvideo/198650/Morgan_Spurlock__Living_On_Bitcoin__The_Inside_Man_Bitcoin_CNN_Full_Documentary/">Inside Man with Morgan Spurlock</a></li>
+<li><a href="http://www.youtube.com/watch?v=fBLpx6gQtUU">Bitcoin: Liberating Organic Farmers</a></li>
+<li><a href="http://www.youtube.com/watch?v=e__m-w4N7NI">Bitcoins in Argentina</a></li>
+<li><a href="https://www.youtube.com/watch?v=K8kua5B5K3I">Life Inside of a Secret Chinese Bitcoin Mine</a></li>
+<li><a href="https://vimeo.com/112223859">The Bitcoin Doco</a></li>
+<li><a href="https://vimeo.com/ondemand/bitcoindoc">The Rise and Rise of Bitcoin</a></li>
+</ul>
+</section>
+<section id="blockchain-art" class="level3">
+<h3 class="anchored" data-anchor-id="blockchain-art">Blockchain Art</h3>
+<ul>
+<li><a href="https://artlery.com">Artlery</a></li>
+<li><a href="https://www.ascribe.io">Ascribe</a></li>
+<li><a href="https://bitmark.com">Bitmark</a></li>
+<li><a href="https://blockai.com">Blockai</a></li>
+<li><a href="http://www.everledger.io">Everledger</a></li>
+<li><a href="http://www.mediachainlabs.com">MediaChain Labs</a></li>
+<li><a href="https://monegraph.com">Monegraph</a></li>
+<li><a href="http://www.tagsmart.com">Tagsmart</a></li>
+<li><a href="https://www.verisart.com">Verisart</a></li>
+</ul>
+</section>
+<section id="explorers" class="level3">
+<h3 class="anchored" data-anchor-id="explorers">Explorers</h3>
+<ul>
+<li><a href="https://bitaps.com/">Bitaps</a></li>
+<li><a href="https://bitinfocharts.com/bitcoin/explorer/">Bitinfocharts</a></li>
+<li><a href="https://blockexplorer.com/">Block Explorer</a></li>
+<li><a href="https://blockchain.info/charts/blocks-size">Blockchain Size:</a></li>
+<li><a href="https://www.blockonomics.co/">Blockonomics</a></li>
+<li><a href="https://explorer.blockstack.org/">Blockstack Explorer</a></li>
+<li><a href="http://blockr.io/">Blockr</a></li>
+<li><a href="https://www.blocktrail.com/BTC">Blocktrail</a></li>
+<li><a href="https://btc.com/">Btc Chain</a></li>
+<li><a href="http://chainflyer.bitflyer.jp">Chain Flyer</a></li>
+<li><a href="https://explorer.coinpayments.net/">Coin Payments</a></li>
+<li><a href="https://www.coinprism.info/">Coin Prism</a></li>
+<li><a href="https://www.coingecko.com/en/price_charts/bitcoin/usd/24_hours">CoinGecko</a></li>
+<li><a href="http://frontier.ether.camp/">Ether.Camp</a></li>
+<li><a href="https://etherchain.org/">EtherChain</a></li>
+<li><a href="https://stats.ethdev.com/">Ethereum Network Stats</a></li>
+<li><a href="https://etherscan.io/">Etherscan</a></li>
+<li><a href="https://insight.bitpay.com/">Insight</a></li>
+<li><a href="https://getaddr.bitnodes.io/">Size of the Network</a></li>
+<li><a href="https://www.smartbit.com.au/">Smartbit</a></li>
+<li><a href="https://chain.so/btc">SoChain</a></li>
+<li><a href="https://tradeblock.com/markets">Tradeblock</a></li>
+<li><a href="https://www.walletexplorer.com/">Wallet Explorer</a></li>
+<li><a href="https://webbtc.com/">WebBtc</a></li>
+</ul>
+</section>
+<section id="assets" class="level3">
+<h3 class="anchored" data-anchor-id="assets">Assets</h3>
+<ul>
+<li><a href="http://coinspark.org/">Coinspark</a></li>
+<li><a href="http://www.chronicled.com/index.html">Chronicled</a></li>
+<li><a href="https://www.everledger.io/">EverLedger</a></li>
+<li><a href="https://github.com/blockai-unofficial/openpublish">OpenPublish</a></li>
+<li><a href="https://github.com/OpenAssets/open-assets-protocol">Open Assets Protocol</a></li>
+<li><a href="https://github.com/blockstack/blockstack-keychains-js">Blockstack Keychains JS</a></li>
+<li><a href="http://blog.richardkiss.com/?p=313">Deterministic Wallets</a></li>
+</ul>
+</section>
+<section id="private-blockchain" class="level3">
+<h3 class="anchored" data-anchor-id="private-blockchain">Private Blockchain</h3>
+<ul>
+<li><a href="https://www.hyperledger.org/">HyperLedger</a></li>
+<li><a href="https://www.openchain.com/">Openchain</a></li>
+</ul>
+</section>
+<section id="tutorials" class="level3">
+<h3 class="anchored" data-anchor-id="tutorials">Tutorials</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=l9jOJk30eQs">How Bitcoin Works in 5 Minutes (Technical)</a> (5m:25s) by <a href="http://Patreon.com/CuriousInventor">Curious Inventor</a></li>
+<li><a href="https://www.youtube.com/watch?v=Lx9zgZCMqXE">How Bitcoin Works Under the Hood</a> (22m:24s) by <a href="http://Patreon.com/CuriousInventor">Curious Inventor</a></li>
+<li><a href="https://www.youtube.com/watch?v=t3hJsFpPmXs">Mechanics of Bitcoin</a> (1h:19m:49s) by <a href="https://www.coursera.org/course/bitcointech">Princeton Bitcoin and Cryptocurrency Technologies Online Course</a></li>
+<li><a href="https://www.youtube.com/programmingbitcoin">Programming Bitcoin Youtube Channel</a> by Murray</li>
+<li><a href="https://www.youtube.com/watch?v=zIbUSaZBJgU">Coding Multi-Signature Addresses</a> by D’Angelo</li>
+<li><a href="http://www2016.net/proceedings/companion/p1021.pdf">Cryptographic Currencies Crash Course (C4)</a> by Aljosha Judmayer and Edgar Weipp</li>
+<li><a href="http://libbitcoin.dyne.org/doc/">The libbitcoin Tutorial</a> by Taaki</li>
+<li><a href="http://codesuppository.blogspot.com/2014/01/how-to-parse-bitcoin-blockchain.html">How to Parse the Bitcoin Blockchain</a> by Ratcliff</li>
+<li><a href="https://gist.github.com/jashmenn/9811205">Signing Offline Transactions</a> by Maxwell</li>
+<li><a href="https://gist.github.com/jashmenn/9811198">2 of 2 escrow example</a> by Maxwell</li>
+<li><a href="https://gist.github.com/jashmenn/9811185">2 of 3 multisig example</a> by Andresen</li>
+<li><a href="https://gist.github.com/ripper234/1625828">How to decrypt messages in the blockchain from btcmsg</a> by ripper234</li>
+<li><a href="https://www.hyperledger.org/resources/training">HyperLedger Training &amp; certifications</a></li>
+<li><a href="https://www.blockchain-council.org/certification-training/">Blockchain council</a></li>
+</ul>
+</section>
+<section id="faucets" class="level3">
+<h3 class="anchored" data-anchor-id="faucets">Faucets</h3>
+<ul>
+<li><a href="http://tpfaucet.appspot.com">Get BTC on Testnet</a></li>
+<li><a href="https://www.rinkeby.io/#faucet">Get ETH on Rinkeby Testnet</a></li>
+<li><a href="https://faucets.blockxlabs.com/">BlockX Labs Universal Faucet</a></li>
+</ul>
+</section>
+<section id="blogs" class="level3">
+<h3 class="anchored" data-anchor-id="blogs">Blogs</h3>
+<ul>
+<li><a href="https://www.coindesk.com">Coindesk</a></li>
+<li><a href="https://cointelegraph.com">CoinTelegraph</a></li>
+<li><a href="https://blockchain.news/">Blockchain.News</a></li>
+<li><a href="https://blog.blockchain.com">Blockchain Blog</a></li>
+<li><a href="https://medium.com/blockchain-blog">Blockchain Blog on Medium</a></li>
+<li><a href="https://www.ibm.com/blogs/blockchain">IBM Blockchain Blog</a></li>
+<li><a href="https://www.ccn.com">CCN</a></li>
+<li><a href="https://bitcoin.org/en/blog">Bitcoin Blog</a></li>
+<li><a href="https://blog.coinbase.com">Coinbase Blog</a></li>
+<li><a href="http://forklog.net">ForkLog</a></li>
+<li><a href="https://blog.ethereum.org">Ethereum Blog</a></li>
+<li><a href="http://ethereumworldnews.com">Ethereum World News</a></li>
+<li><a href="https://blog.zebpay.com">Zebpay Blog</a></li>
+<li><a href="https://blog.coingate.com">Coingate Blog</a></li>
+<li><a href="https://www.binance.com/en/blog/">Binance Blog</a></li>
+<li><a href="https://www.binance.vision">Binance Academy</a></li>
+</ul>
+</section>
+<section id="articles" class="level3">
+<h3 class="anchored" data-anchor-id="articles">Articles</h3>
+<ul>
+<li><a href="https://medium.com/blockchainedindia">Blockchained India Articles</a></li>
+<li><a href="https://medium.com/acycliclabs">Acyclic Labs Articles</a></li>
+<li><a href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6">Snarks</a></li>
+<li><a href="https://crypto.stanford.edu/bulletproofs">Bulletproofs</a> - Short Proofs for Confidential Transactions and More</li>
+<li><a href="https://www.connectbit.com/blockchain-applications/">blockchain-applications</a> - Cheefoo (<span class="citation" data-cites="hellocourage">@hellocourage</span>)</li>
+<li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/index.html">HyperLedger Fabric</a></li>
+<li><a href="https://techwithgajesh.com/blockchain-architecture-explained/">Blockchain Architecture Explained</a></li>
+</ul>
+</section>
+<section id="consensus-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="consensus-mechanisms">Consensus Mechanisms</h3>
+<ul>
+<li><a href="https://www.binance.vision/blockchain/what-is-a-blockchain-consensus-algorithm">What Is a Blockchain Consensus Mechanism</a> by Binance Academy</li>
+</ul>
+<section id="pow---proof-of-work" class="level4">
+<h4 class="anchored" data-anchor-id="pow---proof-of-work">PoW - Proof of Work</h4>
+<ul>
+<li><a href="https://www.zurich.ibm.com/dccl/papers/eyal_dccl_slides.pdf">PoW and Blockchains</a> presentation by Prof.&nbsp;Ittay Eyal (IC3)</li>
+<li><a href="http://nakamotoinstitute.org/mempool/the-proof-of-work-concept/">The PoW concept</a> article by the Nakamoto Institute</li>
+<li><a href="https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/">Proof of Work vs Proof of Stake</a> by BlockGeeks</li>
+<li><a href="https://medium.com/@robertgreenfieldiv/vulnerability-proof-of-work-vs-proof-of-stake-f0c44807d18c">Vulnerability: Proof of Work vs.&nbsp;Proof of Stake</a></li>
+<li><a href="https://www.binance.vision/blockchain/proof-of-work-explained">Proof of Work Explained</a> by Binance Academy</li>
+</ul>
+</section>
+<section id="pos---proof-of-stake" class="level4">
+<h4 class="anchored" data-anchor-id="pos---proof-of-stake">PoS - Proof of Stake</h4>
+<ul>
+<li><a href="https://blog.ethereum.org/2014/07/05/stake/">Strengths and Weaknesses of PoS</a> Vitalik Buterin’s article on the strengths and weaknesses of staking contrasting to PoW algorithms</li>
+<li><a href="https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51">PoS Design Philosophy</a> A Proof of Stake Design Philosophy by Vitalik Buterin</li>
+<li><a href="https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ">Ethereum PoS FAQ</a></li>
+<li><a href="https://cointelegraph.com/news/the-history-and-evolution-of-proof-of-stake">The evolution of PoS</a> Article on the evolution of PoS by Coin Telegraph</li>
+<li><a href="https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/">Weak Subjectivity in PoS</a> Weak Subjectivity in PoS by Vitalik Buterin</li>
+<li><a href="https://medium.com/@Vlad_Zamfir/the-history-of-casper-part-1-59233819c9a9">The History of Casper - Chapter 1</a> Vlad Zamfir’s series on the history of Casper, <a href="https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-2-8e09b9d3b780">Chapter 2</a>, <a href="https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-3-70fefb1182fc">Chapter 3</a>, <a href="https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-4-3855638b5f0e">Chapter 4</a>, <a href="https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-5-8652959cef58">Chapter 5</a></li>
+<li><a href="https://download.wpsoftware.net/bitcoin/pos.pdf">On Stake and Consensus</a></li>
+<li><a href="https://medium.com/@tuurdemeester/critique-of-buterins-a-proof-of-stake-design-philosophy-49fc9ebb36c6">Critic on the PoS Philosophy</a> by Tuur Demeester</li>
+<li><a href="https://medium.com/@jonchoi/ethereum-casper-101-7a851a4f1eb0">Extended Summary on Casper</a> by Jon Choi</li>
+<li><a href="https://medium.com/@gertrammeloo/the-economics-of-the-proof-of-stake-consensus-algorithm-e28adf63e9db">The Economics of the PoS consensus algorithm</a></li>
+<li><a href="https://blog.cosmos.network/consensus-compare-casper-vs-tendermint-6df154ad56ae">Casper vs Tendermint</a></li>
+<li><a href="https://medium.com/@VitalikButerin/minimal-slashing-conditions-20f0b500fc6c">Minimal Slashing condition in Ethereum</a></li>
+<li><a href="https://www.binance.vision/blockchain/proof-of-stake-explained">Proof of Stake Explained</a></li>
+</ul>
+</section>
+<section id="dpos---delegated-proof-of-stake" class="level4">
+<h4 class="anchored" data-anchor-id="dpos---delegated-proof-of-stake">DPoS - Delegated Proof of Stake</h4>
+<ul>
+<li><a href="https://bitshares.org/technology/delegated-proof-of-stake-consensus/">DPoS Introduction</a> Introduction to DPoS by Bitshares</li>
+<li><a href="http://bytemaster.github.io/bitshares/2015/01/04/Delegated-Proof-of-Stake-vs-Proof-of-Work/">DPoS vs PoW</a> Article by Daniel Larimer from Bitshares</li>
+<li><a href="https://blog.cosmos.network/consensus-compare-tendermint-bft-vs-eos-dpos-46c5bca7204b">Tendermint BFT vs.&nbsp;EOS dPoS</a> by Tendermint</li>
+<li><a href="https://steemit.com/eos/@iang/seeking-consensus-on-consensus-dpos-or-delegated-proof-of-stake-and-the-two-generals-problem">Seeking Consensus on Consensus</a> Delegated Proof of Stake and the Two Generals’ Problem</li>
+<li><a href="https://www.binance.vision/blockchain/delegated-proof-of-stake-explained">DPoS Explained</a> by Binance Academy</li>
+</ul>
+</section>
+<section id="dbft---delegated-byzantine-fault-tolerance" class="level4">
+<h4 class="anchored" data-anchor-id="dbft---delegated-byzantine-fault-tolerance">dBFT - Delegated Byzantine Fault Tolerance</h4>
+<ul>
+<li><a href="http://sce.uhcl.edu/goodwin/Ceng5334/downLoads/byzantine.pdf">Byzantine Fault Tolerance in Distributed Systems</a> by Prof.&nbsp;Kenneth Goodwin</li>
+<li><a href="https://www.econotimes.com/Blockchain-project-Antshares-explains-reasons-for-choosing-dBFT-over-PoW-and-PoS-659275">dBFT vs PoW and PoS</a> Antshare’s (now NEO) views on consensus</li>
+<li><a href="https://blog.cosmos.network/a-beginners-guide-to-ethermint-38ee15f8a6f4">Intro to Ethermint BFT</a></li>
+</ul>
+</section>
+</section>
+<section id="governance" class="level3">
+<h3 class="anchored" data-anchor-id="governance">Governance</h3>
+<ul>
+<li><a href="https://blog.coinfund.io/the-consensus-series-part-i-the-basics-of-collectivity-a11d76ff4d5d">The Consensus Series, Part I: The Basics of Collectivity</a> and <a href="https://buzzrobot.com/consensus-series-addendum-1-what-do-the-robots-want-729349014aee">Addendum</a> by Aleksandr Bulkin</li>
+<li><a href="https://blog.aragon.one/thoughts-on-governance-and-network-effects-f40fda3e3f98">Governance and Network Effects</a></li>
+<li><a href="https://vitalik.ca/general/2017/12/17/voting.html">Notes on Blockchain Governance</a> by Vitalik Buterin</li>
+<li><a href="https://medium.com/@Vlad_Zamfir/against-on-chain-governance-a4ceacd040ca">Against On-Chain Governance</a> by Vlad Zamfir</li>
+<li><a href="https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains/">On Public vs Private Blockchains</a> by Vitalik Buterin</li>
+</ul>
+</section>
+<section id="other-decentralised-tech" class="level3">
+<h3 class="anchored" data-anchor-id="other-decentralised-tech">Other Decentralised Tech</h3>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCQaOR_QLI2tGceGAp3ZWfQw">Everything Tangle</a></li>
+<li><a href="https://www.youtube.com/channel/UCPkbe3zIkNgJyB0zk6M1eaA">IOTA projectstube</a></li>
+<li><a href="https://www.youtube.com/channel/UC8xt_puwPKpLwP_UTAa7YIQ">IOTA Currency</a></li>
+<li><a href="http://iotatoken.com/IOTA_Whitepaper.pdf">IOTA WhitePaper v1.3</a></li>
+<li><a href="https://www.youtube.com/channel/UCIhE4NYpaX9E9SssFnwrjww">Hashgraph</a></li>
+</ul>
+</section>
+<section id="discussion-groups" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-groups">Discussion Groups</h3>
+<ul>
+<li><a href="https://t.me/blockchainedindia">Blockchained India</a></li>
+<li><a href="https://t.me/joinchat/BnH_xRIatZHoB-NH31Dkrg">Crypto Trading</a></li>
+<li><a href="https://t.me/BitcoinCore">Bitcoin Core</a></li>
+<li><a href="https://t.me/Litecoin">LiteCoin</a></li>
+<li><a href="https://t.me/litecoiner">Unofficial LTC</a></li>
+<li><a href="https://t.me/peercoin">Peercoin</a></li>
+<li><a href="https://t.me/iotatangle">IOTA Tech</a></li>
+<li><a href="https://slack.iota.org">IOTA Slack</a></li>
+<li><a href="https://t.me/MercuryProtocol">Mercury Protocol</a></li>
+<li><a href="https://t.me/Envion">Envion</a></li>
+<li><a href="http://t.me/hashgraph">Hashgraph</a></li>
+<li><a href="http://t.me/hashgraphdev">Hashgraph Dev</a></li>
+<li><a href="http://t.me/hashgraphnews">Hashgraph News</a></li>
+<li><a href="https://t.me/Leverj">Leverj</a></li>
+<li><a href="https://t.me/prover_io">Prover Project</a></li>
+<li><a href="https://t.me/CanYaCommunity">CanYa Community</a></li>
+<li><a href="https://t.me/indiabits">IndiaBits</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
